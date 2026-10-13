@@ -1,172 +1,324 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>H.K. GUPTA GLOBAL | Strategic Engineering Authority</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700;900&family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <style>
-        :root { --jcb: #FFD200; }
-        * { font-style: normal !important; text-transform: none; word-wrap: break-word; }
-        
-        /* NO BLACK POLICY: Premium Metallic Grey Base */
-        body { font-family: 'Inter', sans-serif; background-color: #f3f4f6; color: #000; overflow-x: hidden; padding-bottom: 100px; }
-        .heading { font-family: 'Space Grotesk', sans-serif; text-transform: uppercase; font-weight: 900; }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>H.K. Gupta Global | Heavy Equipment Diagnostics & Field Support</title>
+<meta name="description" content="Remote diagnostics and on-site field support for JCB, Volvo and Caterpillar equipment, plus sugar cane harvester fleets. 25 years of experience across India, Fiji and the UAE.">
+<meta property="og:title" content="H.K. Gupta Global | Heavy Equipment Diagnostics & Field Support">
+<meta property="og:description" content="Remote and on-site support for JCB, Volvo and CAT fleets and sugar cane harvesters. India, Fiji, UAE.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--y:#FFD200;--ink:#1f2328;--mut:#5b636d;--bg:#f5f6f7;--card:#fff;--line:#d9dde2}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;font-size:1.0625rem;padding-bottom:calc(90px + env(safe-area-inset-bottom,0px))}
+h1,h2,h3{font-family:'Archivo Black',Inter,sans-serif;font-weight:400;line-height:1.08;letter-spacing:-.01em}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.w{max-width:1120px;margin:0 auto;padding:0 20px}
+section{padding:72px 0}
+h2{font-size:clamp(1.7rem,4.5vw,2.8rem);margin-bottom:14px}
+.intro{color:var(--mut);max-width:60ch;margin-bottom:36px}
 
-        /* BRIGHT CINEMATIC HD IMAGE SECTIONS */
-        .full-img-section {
-            background-size: cover; background-position: center; background-attachment: fixed;
-            min-height: 100vh; display: flex; align-items: center; width: 100%;
-        }
-        .img-hero { background-image: linear-gradient(rgba(255,255,255,0.1), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1541625602330-2277a4c4b28d?auto=format&fit=crop&w=1600&q=80'); }
-        .img-fleet { background-image: linear-gradient(rgba(255,255,255,0.2), rgba(255,255,255,0.2)), url('https://images.unsplash.com/photo-1581094288338-2314dddb7eed?auto=format&fit=crop&w=1600&q=80'); }
-        .img-agri { background-image: linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,0.2)), url('https://images.unsplash.com/photo-1592982537447-7440770cbfc9?auto=format&fit=crop&w=1600&q=80'); }
-        .img-dispatch { background-image: linear-gradient(rgba(255,255,255,0.2), rgba(255,255,255,0.3)), url('https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=1600&q=80'); }
+/* header */
+header{position:sticky;top:0;z-index:50;background:var(--y);border-bottom:3px solid var(--ink);padding-top:env(safe-area-inset-top,0px)}
+header .w{display:flex;justify-content:space-between;align-items:center;min-height:60px;gap:12px}
+.logo{font-family:'Archivo Black',sans-serif;font-size:1.15rem}
+nav{display:none;gap:24px;font-weight:700;font-size:.95rem}
+nav a{text-decoration:none}
+nav a:hover{text-decoration:underline}
+@media(min-width:820px){nav{display:flex}}
+.hbtn{background:var(--ink);color:var(--y);padding:10px 18px;border-radius:8px;font-weight:700;text-decoration:none;font-size:.95rem;white-space:nowrap}
 
-        /* ELITE READABILITY: WHITE GLASS */
-        .white-glass { 
-            background: rgba(255, 255, 255, 0.94); 
-            backdrop-filter: blur(15px); 
-            border: 4px solid #000; 
-            border-radius: 2.5rem; 
-            padding: 2.5rem; 
-            box-shadow: 0 30px 70px rgba(0,0,0,0.2);
-            width: 100%;
-        }
+/* hero */
+.hero{color:#fff;padding:96px 0 80px;background:linear-gradient(100deg,rgba(20,22,25,.88) 35%,rgba(20,22,25,.4)),url('https://images.unsplash.com/photo-1541625602330-2277a4c4b28d?auto=format&fit=crop&w=1200&q=70') center/cover}
+.hero h1{font-size:clamp(2.2rem,7vw,4.6rem);max-width:15ch;margin-bottom:20px}
+.hero p{font-size:clamp(1.05rem,2.4vw,1.35rem);max-width:52ch;color:#e6e8eb}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:12px 26px;border-radius:10px;border:2px solid var(--ink);background:var(--y);color:var(--ink);font:700 1rem Inter,sans-serif;text-decoration:none;cursor:pointer}
+.btn.ghost{background:transparent;color:#fff;border-color:#fff}
+.btn.dark{background:var(--ink);color:var(--y)}
+.btn:disabled{opacity:.6;cursor:wait}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.hero .cta .ai{display:none}
+@media(min-width:768px){.hero .cta .ai{display:inline-flex}}
 
-        /* TEXT SCALING - NO CUTTING */
-        .fluid-h1 { font-size: clamp(2.2rem, 11vw, 8rem); line-height: 0.9; font-weight: 900; color: #000; text-shadow: 2px 2px 0px #FFD200; }
-        .jcb-bg { background-color: var(--jcb); color: #000; font-weight: 900; }
+/* stats */
+.stats{background:var(--ink);color:#fff;padding:0}
+.stats .w{display:grid;grid-template-columns:repeat(2,1fr);gap:0}
+@media(min-width:768px){.stats .w{grid-template-columns:repeat(4,1fr)}}
+.stat{padding:28px 20px;border-left:3px solid var(--y)}
+.stat b{display:block;font-family:'Archivo Black',sans-serif;font-size:2rem;color:var(--y);line-height:1}
+.stat span{color:#c9ced4;font-size:.95rem}
 
-        /* MOBILE POWER BAR */
-        .bottom-nav { position: fixed; bottom: 15px; left: 50%; transform: translateX(-50%); width: 96%; z-index: 1000; border: 4px solid #000; box-shadow: 0 20px 50px rgba(0,0,0,0.5); }
-        
-        input, select, textarea { background: #fff !important; border: 3px solid #000 !important; color: #000 !important; padding: 15px; border-radius: 12px; width: 100%; font-size: 17px; font-weight: 800; }
-        input:focus { outline: none; border-color: #FFD200 !important; }
-    </style>
+/* services */
+.grid{display:grid;gap:20px}
+@media(min-width:760px){.grid.c3{grid-template-columns:repeat(3,1fr)}.grid.c2{grid-template-columns:1fr 1fr}}
+.card{background:var(--card);border:1px solid var(--line);border-top:5px solid var(--y);border-radius:10px;padding:26px}
+.card h3{font-size:1.25rem;margin-bottom:8px}
+.card p{color:var(--mut);font-size:1rem}
+
+/* process */
+ol.steps{list-style:none;padding:0;display:grid;gap:20px;counter-reset:s}
+@media(min-width:760px){ol.steps{grid-template-columns:repeat(3,1fr)}}
+ol.steps li{counter-increment:s;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:26px}
+ol.steps li::before{content:counter(s);display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:var(--y);border:2px solid var(--ink);font:400 1.1rem 'Archivo Black',sans-serif;margin-bottom:14px}
+ol.steps h3{font-size:1.15rem;margin-bottom:6px}
+ol.steps p{color:var(--mut)}
+
+/* regions */
+.regions{background:#eceef0}
+.reg{display:flex;flex-wrap:wrap;gap:12px}
+.reg span{background:#fff;border:1px solid var(--line);border-radius:999px;padding:10px 20px;font-weight:700}
+
+/* form */
+.form{background:#fff;border:1px solid var(--line);border-radius:12px;padding:clamp(20px,4vw,36px);display:grid;gap:16px;max-width:720px}
+.two{display:grid;gap:16px}
+@media(min-width:640px){.two{grid-template-columns:1fr 1fr}}
+label{display:block;font-weight:700;font-size:.92rem;margin-bottom:6px}
+input,select,textarea{width:100%;padding:13px 14px;border:2px solid #aeb5bd;border-radius:8px;background:#fff;color:var(--ink);font:500 1rem Inter,sans-serif}
+input:focus,select:focus,textarea:focus{outline:3px solid var(--y);border-color:var(--ink)}
+.hp{position:absolute;left:-9999px;width:0;height:0;opacity:0}
+.msg{display:none;padding:14px;border-radius:8px;font-weight:700}
+.msg.ok{display:block;background:#dff5d3;border:1px solid #8bc66b}
+.msg.err{display:block;background:#fde1dd;border:1px solid #e08a80}
+.fine{font-size:.85rem;color:var(--mut)}
+
+/* careers + footer */
+.jobs{background:var(--ink);color:#fff;text-align:center}
+.jobs p{color:#c9ced4;max-width:48ch;margin:0 auto 22px}
+footer{background:var(--y);border-top:3px solid var(--ink);padding:44px 0}
+footer .logo{font-size:1.4rem;margin-bottom:8px}
+footer small{display:block;margin-top:16px;max-width:70ch;font-size:.82rem}
+
+/* mobile AI bar */
+.bar{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(12px + env(safe-area-inset-bottom,0px));width:min(96%,520px);z-index:60;background:var(--y);border:3px solid var(--ink);border-radius:16px;box-shadow:0 14px 34px rgba(0,0,0,.35);padding:8px}
+.bar .st{display:none;text-align:center;font-weight:700;font-size:.9rem;padding:2px 4px 8px}
+.bar .st.on{display:block}
+.bar .bb{display:flex;gap:8px}
+.bar button,.bar a{flex:1;min-height:52px;display:flex;align-items:center;justify-content:center;background:#fff;border:2px solid var(--ink);border-radius:10px;font:700 .85rem Inter,sans-serif;color:var(--ink);text-decoration:none;cursor:pointer;text-align:center;padding:4px}
+.bar .live{background:var(--ink);color:var(--y)}
+@media(min-width:768px){.bar{display:none}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+.cred{display:grid;gap:16px}
+@media(min-width:760px){.cred{grid-template-columns:repeat(3,1fr)}}
+.cred div{background:#fff;border:1px solid var(--line);border-left:6px solid var(--y);border-radius:10px;padding:20px}
+.cred b{display:block;margin-bottom:4px}
+.cred span{color:var(--mut);font-size:.95rem}
+.ff{display:grid;gap:24px;align-items:start}
+@media(min-width:900px){.ff{grid-template-columns:1fr 1.2fr}}
+.ff .form{max-width:none}
+.res{background:#fff;border:1px solid var(--line);border-top:5px solid var(--y);border-radius:10px;padding:24px;min-height:200px}
+.res h3{font-size:1.2rem;margin-bottom:10px}
+.res ul{padding-left:20px;display:grid;gap:8px}
+.res .fine{margin-top:14px}
+.res .cta{margin-top:18px}
+details{background:#fff;border:1px solid var(--line);border-radius:10px;padding:16px 20px;margin-bottom:12px}
+summary{font-weight:700;cursor:pointer}
+details p{color:var(--mut);margin-top:10px}
+.fab{position:fixed;right:18px;bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:55;background:#25D366;color:#10321c;font-weight:700;padding:14px 20px;border-radius:999px;border:2px solid var(--ink);text-decoration:none;box-shadow:0 10px 26px rgba(0,0,0,.3)}
+@media(max-width:767px){.fab{display:none}}
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"H.K. Gupta Global","description":"Remote diagnostics and on-site field support for JCB, Volvo and Caterpillar equipment and sugar cane harvesters.","telephone":"+919198826081","address":{"@type":"PostalAddress","addressLocality":"Gonda","addressRegion":"Uttar Pradesh","addressCountry":"IN"},"areaServed":["India","Fiji","United Arab Emirates"]}</script>
 </head>
-<body class="antialiased">
+<body>
 
-    <!-- Navbar -->
-    <nav class="fixed top-0 w-full z-[100] bg-[#FFD200] py-3 px-4 md:px-16 flex justify-between items-center border-b-4 border-black">
-        <div class="heading text-xl md:text-4xl font-black text-black leading-tight whitespace-nowrap">H.K. GUPTA GLOBAL</div>
-        <a href="https://wa.me/919198826081" class="text-black text-3xl"><i class="fab fa-whatsapp"></i></a>
-    </nav>
+<header>
+  <div class="w">
+    <div class="logo">H.K. Gupta Global</div>
+    <nav aria-label="Main"><a href="#services">Services</a><a href="#process">How it works</a><a href="#finder">Fault finder</a><a href="#regions">Regions</a><a href="#faq">FAQ</a><a href="#contact">Contact</a></nav>
+    <a class="hbtn" href="#contact">Request support</a>
+  </div>
+</header>
 
-    <!-- Mobile Action Bar (Direct AI Calls) -->
-    <div class="bottom-nav bg-[#FFD200] p-3 rounded-2xl flex justify-around items-center md:hidden">
-        <button onclick="startCall('hi-IN')" class="flex flex-col items-center gap-1 text-black font-black">
-            <i class="fas fa-headset text-2xl"></i><span class="text-[9px]">HINDI AI</span>
-        </button>
-        <div class="h-10 w-[3px] bg-black/20"></div>
-        <button onclick="startCall('en-US')" class="flex flex-col items-center gap-1 text-black font-black">
-            <i class="fas fa-headset text-2xl"></i><span class="text-[9px]">ENGLISH AI</span>
-        </button>
-        <div class="h-10 w-[3px] bg-black/20"></div>
-        <a href="#dispatch" class="flex flex-col items-center gap-1 text-black font-black">
-            <i class="fas fa-tools text-2xl"></i><span class="text-[9px]">BOOKING</span>
-        </a>
+<main>
+<div class="hero">
+  <div class="w">
+    <h1>Keep your fleet earning, wherever it works.</h1>
+    <p>Remote diagnostics and on-site field support for JCB, Volvo and Caterpillar equipment, and sugar cane harvester fleets. 25 years of hands-on experience across India, Fiji and the UAE.</p>
+    <div class="cta">
+      <a class="btn" href="#contact">Request support</a>
+      <button class="btn ghost ai" type="button" data-lang="en-US">Talk to our AI assistant (English)</button>
+      <button class="btn ghost ai" type="button" data-lang="hi-IN">AI assistant (Hindi)</button>
     </div>
+  </div>
+</div>
 
-    <!-- Section 1: Hero (Cinematic Construction) -->
-    <header class="full-img-section img-hero px-4 md:px-20 pt-20">
-        <div class="w-full">
-            <h1 class="heading fluid-h1 mb-8">COMMAND <br>THE FIELD.</h1>
-            <div class="white-glass max-w-2xl">
-                <p class="text-black text-lg md:text-3xl font-black uppercase leading-tight">
-                    25 Years of Mechanical Mastery. Strategic Technical Command for **JCB, Volvo, & Caterpillar** Fleets.
-                </p>
-                <div class="hidden md:flex gap-4 mt-8">
-                    <button onclick="startCall('hi-IN')" class="jcb-bg px-10 py-5 rounded-xl border-4 border-black text-lg">Start Hindi AI Audit</button>
-                    <button onclick="startCall('en-US')" class="bg-white px-10 py-5 rounded-xl border-4 border-black text-lg uppercase">Start English AI Audit</button>
-                </div>
-            </div>
+<div class="stats">
+  <div class="w">
+    <div class="stat"><b>25+</b><span>Years in heavy equipment</span></div>
+    <div class="stat"><b>3</b><span>Major OEM brands</span></div>
+    <div class="stat"><b>3</b><span>Countries served</span></div>
+    <div class="stat"><b>Remote + On-site</b><span>Support options</span></div>
+  </div>
+</div>
+
+<section id="services">
+  <div class="w">
+    <h2>What we support</h2>
+    <p class="intro">Fault diagnosis, repair guidance and field service across earthmoving, road and agricultural fleets.</p>
+    <div class="grid c3">
+      <div class="card"><h3>Excavators</h3><p>Volvo EC140, EC210, EC290. JCB JS200. Caterpillar 320D. Hydraulic, electrical and engine faults.</p></div>
+      <div class="card"><h3>Loaders, graders and dozers</h3><p>JCB 3DX and 4DX backhoe loaders, motor graders, dozers and piling rigs.</p></div>
+      <div class="card"><h3>Sugar cane harvesters</h3><p>Harvester fleet support built on field work with Fiji Sugar Corporation. Road paving and compaction equipment also covered.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="process" style="background:#eceef0">
+  <div class="w">
+    <h2>How support works</h2>
+    <p class="intro">A simple path from fault report to a working machine.</p>
+    <ol class="steps">
+      <li><h3>Report the fault</h3><p>Send machine type, model, location and symptoms through the form, WhatsApp or our AI assistant.</p></li>
+      <li><h3>Remote diagnosis</h3><p>We review the symptoms and photos or fault codes and tell you the likely cause and next steps.</p></li>
+      <li><h3>On-site support</h3><p>Where the machine needs hands-on work, we arrange a field visit.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section id="credentials">
+  <div class="w">
+    <h2>Experience you can verify</h2>
+    <p class="intro">25 years of hands-on work with the dealers and fleets that run this equipment.</p>
+    <div class="cred">
+      <div><b>Dealer-level experience</b><span>Former expert with Volvo, Caterpillar and John Deere dealers.</span></div>
+      <div><b>International fleet work</b><span>Sugar cane harvester fleet support with Fiji Sugar Corporation.</span></div>
+      <div><b>Earthmoving and road assets</b><span>Excavators, backhoe loaders, graders, dozers and paving equipment.</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="finder" style="background:#eceef0">
+  <div class="w">
+    <h2>Quick fault finder</h2>
+    <p class="intro">Pick the machine and the symptom for first checks you can do on site. Then send the details to us in one tap.</p>
+    <div class="ff">
+      <div class="form">
+        <div><label for="fm">Machine</label>
+          <select id="fm"><option>Excavator</option><option>Backhoe loader</option><option>Sugar cane harvester</option><option>Grader / compactor</option><option>Dozer / piling rig</option></select></div>
+        <div><label for="fs">Main symptom</label>
+          <select id="fs"><option value="" disabled selected>Select symptom</option><option value="power">Loss of power</option><option value="heat">Overheating</option><option value="hyd">Weak or slow hydraulics</option><option value="start">Hard start or no start</option><option value="smoke">Excess exhaust smoke</option><option value="code">Warning light or fault code</option></select></div>
+        <p class="fine">Indicative guidance only. It does not replace a proper inspection.</p>
+      </div>
+      <div class="res" id="res" aria-live="polite"><h3>Your first checks will appear here</h3><p class="fine">Choose a symptom to begin.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="regions" class="regions">
+  <div class="w">
+    <h2>Where we work</h2>
+    <p class="intro">Based in Gonda, Uttar Pradesh, supporting fleets internationally.</p>
+    <div class="reg"><span>India</span><span>Fiji</span><span>United Arab Emirates</span></div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="w">
+    <h2>Frequently asked questions</h2>
+    <details><summary>Which machines do you support?</summary><p>JCB, Volvo and Caterpillar excavators and loaders, graders, dozers, piling rigs, road equipment and sugar cane harvesters.</p></details>
+    <details><summary>Can you diagnose a fault remotely?</summary><p>Often yes. Send the model, symptoms, any fault codes and photos or short videos. Some faults need a physical inspection, and we will tell you when that is the case.</p></details>
+    <details><summary>Do you travel for on-site support?</summary><p>Yes. We support fleets in India, Fiji and the UAE. Send your site location and we will confirm availability.</p></details>
+    <details><summary>What should I send with my request?</summary><p>Machine make and model, year, operating hours, what the machine is doing, when it started, any fault codes, and recent repairs.</p></details>
+    <details><summary>Are you an authorised dealer?</summary><p>No. We are an independent service provider with dealer-level experience, not affiliated with the manufacturers.</p></details>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="w">
+    <h2>Request support</h2>
+    <p class="intro">Tell us about the machine and the fault. We will reply on WhatsApp.</p>
+    <form class="form" id="bookForm" action="https://formspree.io/f/meaeknzz" method="POST">
+      <div class="two">
+        <div><label for="c">Full name</label><input id="c" name="Client" autocomplete="name" required></div>
+        <div><label for="co">Company (optional)</label><input id="co" name="Company" autocomplete="organization"></div>
+      </div>
+      <div class="two">
+        <div><label for="p">WhatsApp number with country code</label><input id="p" type="tel" name="Phone" autocomplete="tel" inputmode="tel" placeholder="+679 ..." required></div>
+        <div><label for="e">Email (optional)</label><input id="e" type="email" name="Email" autocomplete="email"></div>
+      </div>
+      <div><label for="s">Site location (city, country)</label><input id="s" name="Site" required></div>
+      <div><label for="u">How urgent is it?</label>
+        <select id="u" name="Urgency" required><option value="" disabled selected>Select</option><option>Machine is down</option><option>Running with a fault</option><option>Planned inspection</option></select></div>
+      <div class="two">
+        <div>
+          <label for="m">Equipment type</label>
+          <select id="m" name="Machine_Type" required>
+            <option value="" disabled selected>Select</option>
+            <option>Excavator (Volvo / JCB / CAT)</option>
+            <option>Backhoe loader (JCB 3DX / 4DX)</option>
+            <option>Sugar cane harvester</option>
+            <option>Road equipment (compactor / grader)</option>
+            <option>Heavy equipment (dozer / piling rig)</option>
+          </select>
         </div>
-    </header>
+        <div><label for="md">Model and year (optional)</label><input id="md" name="Model"></div>
+      </div>
+      <div><label for="f">Describe the fault</label><textarea id="f" name="Fault_Description" rows="4" required></textarea></div>
+      <input class="hp" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <button class="btn dark" type="submit" id="sendBtn">Send request</button>
+      <div class="msg" id="formMsg" role="status" aria-live="polite"></div>
+      <p class="fine">Prefer chat? Message us on <a href="https://wa.me/919198826081">WhatsApp</a> or call <a href="tel:+919198826081">+91 91988 26081</a>.</p>
+    </form>
+  </div>
+</section>
 
-    <!-- Section 2: Fleet (Cinematic Machines) -->
-    <section id="fleet" class="full-img-section img-fleet px-4 md:px-20 py-24">
-        <div class="white-glass">
-            <h2 class="heading text-3xl md:text-8xl mb-10 text-black">FLEET GRID.</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-black font-black uppercase text-sm md:text-2xl">
-                <div class="border-l-8 border-[#FFD200] pl-6">
-                    <p>Volvo EC-290/210/140 | JCB JS-200 | CAT 320D | Graders | Dozers Specialists.</p>
-                    <p class="text-gray-500 mt-2 text-xs md:text-lg">Former Expert: Volvo, Caterpillar & John Deere Dealers.</p>
-                </div>
-                <div class="border-l-8 border-[#FFD200] pl-6">
-                    <p>Sugar Cane Harvester Fleet | Road Paving Assets.</p>
-                    <p class="text-gray-500 mt-2 text-xs md:text-lg">International Exposure: FIJI Sugar Corporation.</p>
-                </div>
-            </div>
-            <div class="mt-12 bg-black text-[#FFD200] p-8 rounded-3xl text-center">
-                <p class="font-black text-sm md:text-2xl uppercase">Join Our Global Engineering Network</p>
-                <a href="https://forms.gle/t6CPv9FL7erkpgBu7" class="jcb-bg px-12 py-4 mt-4 rounded-xl inline-block text-black text-sm shadow-2xl">Apply Now</a>
-            </div>
-        </div>
-    </section>
+<section class="jobs">
+  <div class="w">
+    <h2>Join our engineering network</h2>
+    <p>Experienced heavy equipment engineers and technicians can apply to work with us on international projects.</p>
+    <a class="btn" href="https://forms.gle/t6CPv9FL7erkpgBu7">Apply as an engineer</a>
+  </div>
+</section>
+</main>
 
-    <!-- Section 3: Agri (Sugar Cane Fields) -->
-    <section class="full-img-section img-agri px-4 md:px-20 py-24">
-        <div class="container mx-auto flex justify-end">
-            <div class="white-glass max-w-4xl text-right !border-r-8 !border-l-0">
-                <h2 class="heading text-4xl md:text-9xl mb-4">GLOBAL <br>AGRI-TECH.</h2>
-                <p class="text-black font-black text-xl md:text-5xl uppercase leading-none">
-                    International Harvester Dispatch. <br>Fiji & India Specialized Support.
-                </p>
-            </div>
-        </div>
-    </section>
+<footer>
+  <div class="w">
+    <div class="logo">H.K. Gupta Global</div>
+    <p>Gonda, Uttar Pradesh, India &nbsp;|&nbsp; Serving India, Fiji and the UAE</p>
+    <p><a href="tel:+919198826081">+91 91988 26081</a> &nbsp;|&nbsp; <a href="https://wa.me/919198826081">WhatsApp</a></p>
+    <small>H.K. Gupta Global is an independent service provider and is not affiliated with, authorised by or endorsed by JCB, Volvo, Caterpillar or John Deere. Brand names are used only to describe the equipment we service. Our AI assistant is automated and calls may be recorded.</small>
+  </div>
+</footer>
 
-    <!-- Section 4: Dispatch Center (The Final Form) -->
-    <section id="dispatch" class="full-img-section img-dispatch px-4 md:px-20 py-24">
-        <div class="container mx-auto max-w-7xl grid lg:grid-cols-2 gap-16 items-center">
-            <div class="heading text-5xl md:text-9xl text-black leading-none uppercase">DISPATCH <br><span class="bg-black text-[#FFD200] px-3">CENTER.</span></div>
-            
-            <div class="white-glass">
-                <form action="https://formspree.io/f/meaeknzz" method="POST" class="space-y-4 font-black uppercase">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4"><input type="text" name="Client" placeholder="CLIENT NAME" required><input type="tel" name="Phone" placeholder="WHATSAPP NUMBER" required></div>
-                    <input type="text" name="Site" placeholder="SITE LOCATION (CITY / COUNTRY)" required>
-                    
-                    <select name="Machine_Type" required>
-                        <option value="" disabled selected>SELECT MACHINE FLEET</option>
-                        <option>Excavator (Volvo/JCB/CAT)</option>
-                        <option>Backhoe Loader (JCB 3D/4DX)</option>
-                        <option>Sugar Cane Harvester (Fiji Specs)</option>
-                        <option>Road Infra (Compactor/Grader)</option>
-                        <option>Heavy (Dozer/Piling Rig)</option>
-                    </select>
-                    
-                    <textarea name="Fault_Description" rows="4" placeholder="DESCRIPTION OF TECHNICAL FAULTS / MECHANICAL ISSUES..." required></textarea>
-                    
-                    <button type="submit" class="w-full bg-black text-[#FFD200] py-6 rounded-xl text-xl font-black shadow-2xl uppercase hover:scale-105 transition">Deploy Support</button>
-                </form>
-            </div>
-        </div>
-    </section>
+<a class="fab" href="https://wa.me/919198826081" aria-label="Chat on WhatsApp">WhatsApp us</a>
 
-    <!-- FINAL BRANDING FOOTER -->
-    <footer class="bg-[#FFD200] py-24 text-center border-t-8 border-black px-6">
-        <div class="heading text-xl md:text-7xl font-black text-black mb-4">H.K. GUPTA GLOBAL</div>
-        <p class="font-black text-black text-sm md:text-2xl uppercase tracking-tighter leading-tight">
-            Gonda | Fiji | UAE | Pan-Asia Strategic Dispatch Node
-        </p>
-    </footer>
+<div class="bar" role="region" aria-label="Quick actions">
+  <div class="st" id="st" role="status" aria-live="polite"></div>
+  <div class="bb">
+    <button type="button" data-lang="en-US">AI assistant<br>English</button>
+    <button type="button" data-lang="hi-IN">AI assistant<br>हिन्दी</button>
+    <a href="#contact">Request<br>support</a>
+  </div>
+</div>
 
-    <!-- FINAL AI LOGIC ENGINE -->
-    <script src="https://cdn.jsdelivr.net/gh/VapiAI/html-script-tag@latest/dist/vapi-public.js"></script>
-    <script>
-        // NEW PUBLIC API KEY INTEGRATED
-        var vapi = new Vapi("433780ac-9d58-4d50-8035-c8be525f1a30"); 
-        
-        function startCall(lang) {
-            console.log("Strategic Audit Initiated in: " + lang);
-            vapi.start("cfc6c740-7363-441d-b350-f8a7b0b7f821", {
-                variableValues: { language: lang } 
-            });
-        }
-    </script>
-</body>
-</html>
+<script>
+(function(){
+  var KEY="433780ac-9d58-4d50-8035-c8be525f1a30", ID="cfc6c740-7363-441d-b350-f8a7b0b7f821";
+  var vapi=null, inCall=false, busy=false, st=document.getElementById('st');
+  var btns=document.querySelectorAll('[data-lang]');
+  function say(t){ st.textContent=t; st.classList.toggle('on',!!t); }
+  function live(on){ btns.forEach(function(b){ b.classList.toggle('live',on); }); }
+  function load(){
+    if(vapi) return Promise.resolve(vapi);
+    return import('https://esm.sh/@vapi-ai/web@2.5.2').then(function(m){
+      var V=(m.default&&m.default.default)?m.default.default:m.default;
+      vapi=new V(KEY);
+      vapi.on('call-start',function(){inCall=true;busy=false;live(true);say('Connected. Tap again to end the call.');});
+      vapi.on('call-end',function(){inCall=false;busy=false;live(false);say('');});
+      vapi.on('error',function(e){console.error('Vapi error',e);inCall=false;busy=false;live(false);say('Could not start the call. Please allow microphone access or use WhatsApp.');});
+      return vapi;
+    });
+  }
+  window.addEventListener('load',function(){ load().catch(function(e){console.error('Vapi load failed',e);}); });
+  btns.forEach(function(b){ b.addEventListener('click',function(){
+    if(inCall&&vapi){vapi.stop();return;}
+    if(busy)return; busy=true;
+    say('Connecting to our AI assistant. Calls may be recorded.');
+    load().then(function(v){ return v.start(ID,{variableValues:{language:b.dataset.lang}}); })
+      .catch(function(e){console.error(e);busy=false;say('Could not st
