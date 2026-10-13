@@ -3,172 +3,789 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
 <title>H.K. Gupta Global | Heavy Equipment Diagnostics & Field Support</title>
+
 <meta name="description" content="Remote diagnostics and on-site field support for JCB, Volvo and Caterpillar equipment, plus sugar cane harvester fleets. 25 years of experience across India, Fiji and the UAE.">
+
 <meta property="og:title" content="H.K. Gupta Global | Heavy Equipment Diagnostics & Field Support">
 <meta property="og:description" content="Remote and on-site support for JCB, Volvo and CAT fleets and sugar cane harvesters. India, Fiji, UAE.">
 <meta property="og:type" content="website">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
 <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+
 <style>
-:root{--y:#FFD200;--ink:#1f2328;--mut:#5b636d;--bg:#f5f6f7;--card:#fff;--line:#d9dde2}
-*{box-sizing:border-box;margin:0}
-html{scroll-behavior:smooth}
-body{font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;font-size:1.0625rem;padding-bottom:calc(90px + env(safe-area-inset-bottom,0px))}
-h1,h2,h3{font-family:'Archivo Black',Inter,sans-serif;font-weight:400;line-height:1.08;letter-spacing:-.01em}
-a{color:inherit}
-:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
-.w{max-width:1120px;margin:0 auto;padding:0 20px}
-section{padding:72px 0}
-h2{font-size:clamp(1.7rem,4.5vw,2.8rem);margin-bottom:14px}
-.intro{color:var(--mut);max-width:60ch;margin-bottom:36px}
+:root {
+  --y:#FFD200;
+  --ink:#1f2328;
+  --mut:#5b636d;
+  --bg:#f5f6f7;
+  --card:#fff;
+  --line:#d9dde2;
+}
 
-/* header */
-header{position:sticky;top:0;z-index:50;background:var(--y);border-bottom:3px solid var(--ink);padding-top:env(safe-area-inset-top,0px)}
-header .w{display:flex;justify-content:space-between;align-items:center;min-height:60px;gap:12px}
-.logo{font-family:'Archivo Black',sans-serif;font-size:1.15rem}
-nav{display:none;gap:24px;font-weight:700;font-size:.95rem}
-nav a{text-decoration:none}
-nav a:hover{text-decoration:underline}
-@media(min-width:820px){nav{display:flex}}
-.hbtn{background:var(--ink);color:var(--y);padding:10px 18px;border-radius:8px;font-weight:700;text-decoration:none;font-size:.95rem;white-space:nowrap}
+* {
+  box-sizing:border-box;
+  margin:0;
+}
 
-/* hero */
-.hero{color:#fff;padding:96px 0 80px;background:linear-gradient(100deg,rgba(20,22,25,.88) 35%,rgba(20,22,25,.4)),url('https://images.unsplash.com/photo-1541625602330-2277a4c4b28d?auto=format&fit=crop&w=1200&q=70') center/cover}
-.hero h1{font-size:clamp(2.2rem,7vw,4.6rem);max-width:15ch;margin-bottom:20px}
-.hero p{font-size:clamp(1.05rem,2.4vw,1.35rem);max-width:52ch;color:#e6e8eb}
-.btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:12px 26px;border-radius:10px;border:2px solid var(--ink);background:var(--y);color:var(--ink);font:700 1rem Inter,sans-serif;text-decoration:none;cursor:pointer}
-.btn.ghost{background:transparent;color:#fff;border-color:#fff}
-.btn.ghost.live{background:var(--y);color:var(--ink);border-color:var(--y)}
-.btn.dark{background:var(--ink);color:var(--y)}
-.btn:disabled{opacity:.6;cursor:wait}
-.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
-.hero .cta .ai{display:none}
-@media(min-width:768px){.hero .cta .ai{display:inline-flex}}
-.hero .live-note{display:none;margin-top:14px;font-weight:700;color:var(--y)}
-.hero .live-note.on{display:block}
+html {
+  scroll-behavior:smooth;
+}
 
-/* stats */
-.stats{background:var(--ink);color:#fff;padding:0}
-.stats .w{display:grid;grid-template-columns:repeat(2,1fr);gap:0}
-@media(min-width:768px){.stats .w{grid-template-columns:repeat(4,1fr)}}
-.stat{padding:28px 20px;border-left:3px solid var(--y)}
-.stat b{display:block;font-family:'Archivo Black',sans-serif;font-size:2rem;color:var(--y);line-height:1}
-.stat span{color:#c9ced4;font-size:.95rem}
+body {
+  font-family:Inter,system-ui,sans-serif;
+  background:var(--bg);
+  color:var(--ink);
+  line-height:1.6;
+  font-size:1.0625rem;
+  padding-bottom:calc(90px + env(safe-area-inset-bottom,0px));
+}
 
-/* services */
-.grid{display:grid;gap:20px}
-@media(min-width:760px){.grid.c3{grid-template-columns:repeat(3,1fr)}.grid.c2{grid-template-columns:1fr 1fr}}
-.card{background:var(--card);border:1px solid var(--line);border-top:5px solid var(--y);border-radius:10px;padding:26px}
-.card h3{font-size:1.25rem;margin-bottom:8px}
-.card p{color:var(--mut);font-size:1rem}
+h1,h2,h3 {
+  font-family:'Archivo Black',Inter,sans-serif;
+  font-weight:400;
+  line-height:1.08;
+  letter-spacing:-.01em;
+}
 
-/* process */
-ol.steps{list-style:none;padding:0;display:grid;gap:20px;counter-reset:s}
-@media(min-width:760px){ol.steps{grid-template-columns:repeat(3,1fr)}}
-ol.steps li{counter-increment:s;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:26px}
-ol.steps li::before{content:counter(s);display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:var(--y);border:2px solid var(--ink);font:400 1.1rem 'Archivo Black',sans-serif;margin-bottom:14px}
-ol.steps h3{font-size:1.15rem;margin-bottom:6px}
-ol.steps p{color:var(--mut)}
+a {
+  color:inherit;
+}
 
-/* regions */
-.regions{background:#eceef0}
-.reg{display:flex;flex-wrap:wrap;gap:12px}
-.reg span{background:#fff;border:1px solid var(--line);border-radius:999px;padding:10px 20px;font-weight:700}
+:focus-visible {
+  outline:3px solid var(--ink);
+  outline-offset:3px;
+}
 
-/* form */
-.form{background:#fff;border:1px solid var(--line);border-radius:12px;padding:clamp(20px,4vw,36px);display:grid;gap:16px;max-width:720px}
-.two{display:grid;gap:16px}
-@media(min-width:640px){.two{grid-template-columns:1fr 1fr}}
-label{display:block;font-weight:700;font-size:.92rem;margin-bottom:6px}
-input,select,textarea{width:100%;padding:13px 14px;border:2px solid #aeb5bd;border-radius:8px;background:#fff;color:var(--ink);font:500 1rem Inter,sans-serif}
-input:focus,select:focus,textarea:focus{outline:3px solid var(--y);border-color:var(--ink)}
-.hp{position:absolute;left:-9999px;width:0;height:0;opacity:0}
-.msg{display:none;padding:14px;border-radius:8px;font-weight:700}
-.msg.ok{display:block;background:#dff5d3;border:1px solid #8bc66b}
-.msg.err{display:block;background:#fde1dd;border:1px solid #e08a80}
-.fine{font-size:.85rem;color:var(--mut)}
+.w {
+  max-width:1120px;
+  margin:0 auto;
+  padding:0 20px;
+}
 
-/* careers + footer */
-.jobs{background:var(--ink);color:#fff;text-align:center}
-.jobs p{color:#c9ced4;max-width:48ch;margin:0 auto 22px}
-footer{background:var(--y);border-top:3px solid var(--ink);padding:44px 0}
-footer .logo{font-size:1.4rem;margin-bottom:8px}
-footer small{display:block;margin-top:16px;max-width:70ch;font-size:.82rem}
+section {
+  padding:72px 0;
+}
 
-/* mobile AI bar */
-.bar{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(12px + env(safe-area-inset-bottom,0px));width:min(96%,520px);z-index:60;background:var(--y);border:3px solid var(--ink);border-radius:16px;box-shadow:0 14px 34px rgba(0,0,0,.35);padding:8px}
-.bar .st{display:none;text-align:center;font-weight:700;font-size:.9rem;padding:2px 4px 8px}
-.bar .st.on{display:block}
-.bar .bb{display:flex;gap:8px}
-.bar button,.bar a{flex:1;min-height:52px;display:flex;align-items:center;justify-content:center;background:#fff;border:2px solid var(--ink);border-radius:10px;font:700 .85rem Inter,sans-serif;color:var(--ink);text-decoration:none;cursor:pointer;text-align:center;padding:4px}
-.bar .live{background:var(--ink);color:var(--y)}
-@media(min-width:768px){.bar{display:none}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+h2 {
+  font-size:clamp(1.7rem,4.5vw,2.8rem);
+  margin-bottom:14px;
+}
 
-.cred{display:grid;gap:16px}
-@media(min-width:760px){.cred{grid-template-columns:repeat(3,1fr)}}
-.cred div{background:#fff;border:1px solid var(--line);border-left:6px solid var(--y);border-radius:10px;padding:20px}
-.cred b{display:block;margin-bottom:4px}
-.cred span{color:var(--mut);font-size:.95rem}
-.ff{display:grid;gap:24px;align-items:start}
-@media(min-width:900px){.ff{grid-template-columns:1fr 1.2fr}}
-.ff .form{max-width:none}
-.res{background:#fff;border:1px solid var(--line);border-top:5px solid var(--y);border-radius:10px;padding:24px;min-height:200px}
-.res h3{font-size:1.2rem;margin-bottom:10px}
-.res ul{padding-left:20px;display:grid;gap:8px}
-.res .fine{margin-top:14px}
-.res .cta{margin-top:18px}
-details{background:#fff;border:1px solid var(--line);border-radius:10px;padding:16px 20px;margin-bottom:12px}
-summary{font-weight:700;cursor:pointer}
-details p{color:var(--mut);margin-top:10px}
-.fab{position:fixed;right:18px;bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:55;background:#25D366;color:#10321c;font-weight:700;padding:14px 20px;border-radius:999px;border:2px solid var(--ink);text-decoration:none;box-shadow:0 10px 26px rgba(0,0,0,.3)}
-@media(max-width:767px){.fab{display:none}}
+.intro {
+  color:var(--mut);
+  max-width:60ch;
+  margin-bottom:36px;
+}
+
+/* Header */
+
+header {
+  position:sticky;
+  top:0;
+  z-index:50;
+  background:var(--y);
+  border-bottom:3px solid var(--ink);
+  padding-top:env(safe-area-inset-top,0px);
+}
+
+header .w {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  min-height:60px;
+  gap:12px;
+}
+
+.logo {
+  font-family:'Archivo Black',sans-serif;
+  font-size:1.15rem;
+}
+
+nav {
+  display:none;
+  gap:24px;
+  font-weight:700;
+  font-size:.95rem;
+}
+
+nav a {
+  text-decoration:none;
+}
+
+nav a:hover {
+  text-decoration:underline;
+}
+
+@media(min-width:820px) {
+  nav {
+    display:flex;
+  }
+}
+
+.hbtn {
+  background:var(--ink);
+  color:var(--y);
+  padding:10px 18px;
+  border-radius:8px;
+  font-weight:700;
+  text-decoration:none;
+  font-size:.95rem;
+  white-space:nowrap;
+}
+
+/* Hero */
+
+.hero {
+  color:#fff;
+  padding:96px 0 80px;
+  background:
+    linear-gradient(100deg,rgba(20,22,25,.88) 35%,rgba(20,22,25,.4)),
+    url('https://images.unsplash.com/photo-1541625602330-2277a4c4b28d?auto=format&fit=crop&w=1200&q=70')
+    center/cover;
+}
+
+.hero h1 {
+  font-size:clamp(2.2rem,7vw,4.6rem);
+  max-width:15ch;
+  margin-bottom:20px;
+}
+
+.hero p {
+  font-size:clamp(1.05rem,2.4vw,1.35rem);
+  max-width:52ch;
+  color:#e6e8eb;
+}
+
+.btn {
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:52px;
+  padding:12px 26px;
+  border-radius:10px;
+  border:2px solid var(--ink);
+  background:var(--y);
+  color:var(--ink);
+  font:700 1rem Inter,sans-serif;
+  text-decoration:none;
+  cursor:pointer;
+}
+
+.btn.ghost {
+  background:transparent;
+  color:#fff;
+  border-color:#fff;
+}
+
+.btn.ghost.live {
+  background:var(--y);
+  color:var(--ink);
+  border-color:var(--y);
+}
+
+.btn.dark {
+  background:var(--ink);
+  color:var(--y);
+}
+
+.btn:disabled {
+  opacity:.6;
+  cursor:wait;
+}
+
+.cta {
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+  margin-top:30px;
+}
+
+.hero .cta .ai {
+  display:none;
+}
+
+@media(min-width:768px) {
+  .hero .cta .ai {
+    display:inline-flex;
+  }
+}
+
+.hero .live-note {
+  display:none;
+  margin-top:14px;
+  font-weight:700;
+  color:var(--y);
+}
+
+.hero .live-note.on {
+  display:block;
+}
+
+/* Stats */
+
+.stats {
+  background:var(--ink);
+  color:#fff;
+  padding:0;
+}
+
+.stats .w {
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:0;
+}
+
+@media(min-width:768px) {
+  .stats .w {
+    grid-template-columns:repeat(4,1fr);
+  }
+}
+
+.stat {
+  padding:28px 20px;
+  border-left:3px solid var(--y);
+}
+
+.stat b {
+  display:block;
+  font-family:'Archivo Black',sans-serif;
+  font-size:2rem;
+  color:var(--y);
+  line-height:1;
+}
+
+.stat span {
+  color:#c9ced4;
+  font-size:.95rem;
+}
+
+/* Services */
+
+.grid {
+  display:grid;
+  gap:20px;
+}
+
+@media(min-width:760px) {
+  .grid.c3 {
+    grid-template-columns:repeat(3,1fr);
+  }
+
+  .grid.c2 {
+    grid-template-columns:1fr 1fr;
+  }
+}
+
+.card {
+  background:var(--card);
+  border:1px solid var(--line);
+  border-top:5px solid var(--y);
+  border-radius:10px;
+  padding:26px;
+}
+
+.card h3 {
+  font-size:1.25rem;
+  margin-bottom:8px;
+}
+
+.card p {
+  color:var(--mut);
+  font-size:1rem;
+}
+
+/* Process */
+
+ol.steps {
+  list-style:none;
+  padding:0;
+  display:grid;
+  gap:20px;
+  counter-reset:s;
+}
+
+@media(min-width:760px) {
+  ol.steps {
+    grid-template-columns:repeat(3,1fr);
+  }
+}
+
+ol.steps li {
+  counter-increment:s;
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:10px;
+  padding:26px;
+}
+
+ol.steps li::before {
+  content:counter(s);
+  display:grid;
+  place-items:center;
+  width:40px;
+  height:40px;
+  border-radius:50%;
+  background:var(--y);
+  border:2px solid var(--ink);
+  font:400 1.1rem 'Archivo Black',sans-serif;
+  margin-bottom:14px;
+}
+
+ol.steps h3 {
+  font-size:1.15rem;
+  margin-bottom:6px;
+}
+
+ol.steps p {
+  color:var(--mut);
+}
+
+/* Regions */
+
+.regions {
+  background:#eceef0;
+}
+
+.reg {
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+}
+
+.reg span {
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:999px;
+  padding:10px 20px;
+  font-weight:700;
+}
+
+/* Form */
+
+.form {
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:12px;
+  padding:clamp(20px,4vw,36px);
+  display:grid;
+  gap:16px;
+  max-width:720px;
+}
+
+.two {
+  display:grid;
+  gap:16px;
+}
+
+@media(min-width:640px) {
+  .two {
+    grid-template-columns:1fr 1fr;
+  }
+}
+
+label {
+  display:block;
+  font-weight:700;
+  font-size:.92rem;
+  margin-bottom:6px;
+}
+
+input,select,textarea {
+  width:100%;
+  padding:13px 14px;
+  border:2px solid #aeb5bd;
+  border-radius:8px;
+  background:#fff;
+  color:var(--ink);
+  font:500 1rem Inter,sans-serif;
+}
+
+input:focus,select:focus,textarea:focus {
+  outline:3px solid var(--y);
+  border-color:var(--ink);
+}
+
+.hp {
+  position:absolute;
+  left:-9999px;
+  width:0;
+  height:0;
+  opacity:0;
+}
+
+.msg {
+  display:none;
+  padding:14px;
+  border-radius:8px;
+  font-weight:700;
+}
+
+.msg.ok {
+  display:block;
+  background:#dff5d3;
+  border:1px solid #8bc66b;
+}
+
+.msg.err {
+  display:block;
+  background:#fde1dd;
+  border:1px solid #e08a80;
+}
+
+.fine {
+  font-size:.85rem;
+  color:var(--mut);
+}
+
+/* Careers and footer */
+
+.jobs {
+  background:var(--ink);
+  color:#fff;
+  text-align:center;
+}
+
+.jobs p {
+  color:#c9ced4;
+  max-width:48ch;
+  margin:0 auto 22px;
+}
+
+footer {
+  background:var(--y);
+  border-top:3px solid var(--ink);
+  padding:44px 0;
+}
+
+footer .logo {
+  font-size:1.4rem;
+  margin-bottom:8px;
+}
+
+footer small {
+  display:block;
+  margin-top:16px;
+  max-width:70ch;
+  font-size:.82rem;
+}
+
+/* Mobile AI bar */
+
+.bar {
+  position:fixed;
+  left:50%;
+  transform:translateX(-50%);
+  bottom:calc(12px + env(safe-area-inset-bottom,0px));
+  width:min(96%,520px);
+  z-index:60;
+  background:var(--y);
+  border:3px solid var(--ink);
+  border-radius:16px;
+  box-shadow:0 14px 34px rgba(0,0,0,.35);
+  padding:8px;
+}
+
+.bar .st {
+  display:none;
+  text-align:center;
+  font-weight:700;
+  font-size:.9rem;
+  padding:2px 4px 8px;
+}
+
+.bar .st.on {
+  display:block;
+}
+
+.bar .bb {
+  display:flex;
+  gap:8px;
+}
+
+.bar button,
+.bar a {
+  flex:1;
+  min-height:52px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:#fff;
+  border:2px solid var(--ink);
+  border-radius:10px;
+  font:700 .85rem Inter,sans-serif;
+  color:var(--ink);
+  text-decoration:none;
+  cursor:pointer;
+  text-align:center;
+  padding:4px;
+}
+
+.bar button:disabled {
+  opacity:.65;
+  cursor:wait;
+}
+
+.bar .live {
+  background:var(--ink);
+  color:var(--y);
+}
+
+@media(min-width:768px) {
+  .bar {
+    display:none;
+  }
+}
+
+@media(prefers-reduced-motion:reduce) {
+  html {
+    scroll-behavior:auto;
+  }
+}
+
+.cred {
+  display:grid;
+  gap:16px;
+}
+
+@media(min-width:760px) {
+  .cred {
+    grid-template-columns:repeat(3,1fr);
+  }
+}
+
+.cred div {
+  background:#fff;
+  border:1px solid var(--line);
+  border-left:6px solid var(--y);
+  border-radius:10px;
+  padding:20px;
+}
+
+.cred b {
+  display:block;
+  margin-bottom:4px;
+}
+
+.cred span {
+  color:var(--mut);
+  font-size:.95rem;
+}
+
+.ff {
+  display:grid;
+  gap:24px;
+  align-items:start;
+}
+
+@media(min-width:900px) {
+  .ff {
+    grid-template-columns:1fr 1.2fr;
+  }
+}
+
+.ff .form {
+  max-width:none;
+}
+
+.res {
+  background:#fff;
+  border:1px solid var(--line);
+  border-top:5px solid var(--y);
+  border-radius:10px;
+  padding:24px;
+  min-height:200px;
+}
+
+.res h3 {
+  font-size:1.2rem;
+  margin-bottom:10px;
+}
+
+.res ul {
+  padding-left:20px;
+  display:grid;
+  gap:8px;
+}
+
+.res .fine {
+  margin-top:14px;
+}
+
+.res .cta {
+  margin-top:18px;
+}
+
+details {
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:10px;
+  padding:16px 20px;
+  margin-bottom:12px;
+}
+
+summary {
+  font-weight:700;
+  cursor:pointer;
+}
+
+details p {
+  color:var(--mut);
+  margin-top:10px;
+}
+
+.fab {
+  position:fixed;
+  right:18px;
+  bottom:calc(18px + env(safe-area-inset-bottom,0px));
+  z-index:55;
+  background:#25D366;
+  color:#10321c;
+  font-weight:700;
+  padding:14px 20px;
+  border-radius:999px;
+  border:2px solid var(--ink);
+  text-decoration:none;
+  box-shadow:0 10px 26px rgba(0,0,0,.3);
+}
+
+@media(max-width:767px) {
+  .fab {
+    display:none;
+  }
+}
 </style>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"H.K. Gupta Global","description":"Remote diagnostics and on-site field support for JCB, Volvo and Caterpillar equipment and sugar cane harvesters.","telephone":"+919198826081","address":{"@type":"PostalAddress","addressLocality":"Gonda","addressRegion":"Uttar Pradesh","addressCountry":"IN"},"areaServed":["India","Fiji","United Arab Emirates"]}</script>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"ProfessionalService",
+  "name":"H.K. Gupta Global",
+  "description":"Remote diagnostics and on-site field support for JCB, Volvo and Caterpillar equipment and sugar cane harvesters.",
+  "telephone":"+919198826081",
+  "address":{
+    "@type":"PostalAddress",
+    "addressLocality":"Gonda",
+    "addressRegion":"Uttar Pradesh",
+    "addressCountry":"IN"
+  },
+  "areaServed":[
+    "India",
+    "Fiji",
+    "United Arab Emirates"
+  ]
+}
+</script>
 </head>
+
 <body>
 
 <header>
   <div class="w">
     <div class="logo">H.K. Gupta Global</div>
-    <nav aria-label="Main"><a href="#services">Services</a><a href="#process">How it works</a><a href="#finder">Fault finder</a><a href="#regions">Regions</a><a href="#faq">FAQ</a><a href="#contact">Contact</a></nav>
+
+    <nav aria-label="Main">
+      <a href="#services">Services</a>
+      <a href="#process">How it works</a>
+      <a href="#finder">Fault finder</a>
+      <a href="#regions">Regions</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
     <a class="hbtn" href="#contact">Request support</a>
   </div>
 </header>
 
 <main>
+
 <div class="hero">
   <div class="w">
     <h1>Keep your fleet earning, wherever it works.</h1>
-    <p>Remote diagnostics and on-site field support for JCB, Volvo and Caterpillar equipment, and sugar cane harvester fleets. 25 years of hands-on experience across India, Fiji and the UAE.</p>
+
+    <p>
+      Remote diagnostics and on-site field support for JCB, Volvo and
+      Caterpillar equipment, and sugar cane harvester fleets. 25 years of
+      hands-on experience across India, Fiji and the UAE.
+    </p>
+
     <div class="cta">
       <a class="btn" href="#contact">Request support</a>
-      <button class="btn ghost ai" type="button" data-lang="en-US">Talk to our AI assistant (English)</button>
-      <button class="btn ghost ai" type="button" data-lang="hi-IN">AI assistant (Hindi)</button>
+
+      <button class="btn ghost ai" type="button" data-lang="en-US">
+        Talk to our AI assistant (English)
+      </button>
+
+      <button class="btn ghost ai" type="button" data-lang="hi-IN">
+        AI assistant (Hindi)
+      </button>
     </div>
+
     <p class="live-note" id="heroSt" role="status" aria-live="polite"></p>
   </div>
 </div>
 
 <div class="stats">
   <div class="w">
-    <div class="stat"><b>25+</b><span>Years in heavy equipment</span></div>
-    <div class="stat"><b>3</b><span>Major OEM brands</span></div>
-    <div class="stat"><b>3</b><span>Countries served</span></div>
-    <div class="stat"><b>Remote + On-site</b><span>Support options</span></div>
+    <div class="stat">
+      <b>25+</b>
+      <span>Years in heavy equipment</span>
+    </div>
+
+    <div class="stat">
+      <b>3</b>
+      <span>Major OEM brands</span>
+    </div>
+
+    <div class="stat">
+      <b>3</b>
+      <span>Countries served</span>
+    </div>
+
+    <div class="stat">
+      <b>Remote + On-site</b>
+      <span>Support options</span>
+    </div>
   </div>
 </div>
 
 <section id="services">
   <div class="w">
     <h2>What we support</h2>
-    <p class="intro">Fault diagnosis, repair guidance and field service across earthmoving, road and agricultural fleets.</p>
+
+    <p class="intro">
+      Fault diagnosis, repair guidance and field service across earthmoving,
+      road and agricultural fleets.
+    </p>
+
     <div class="grid c3">
-      <div class="card"><h3>Excavators</h3><p>Volvo EC140, EC210, EC290. JCB JS200. Caterpillar 320D. Hydraulic, electrical and engine faults.</p></div>
-      <div class="card"><h3>Loaders, graders and dozers</h3><p>JCB 3DX and 4DX backhoe loaders, motor graders, dozers and piling rigs.</p></div>
-      <div class="card"><h3>Sugar cane harvesters</h3><p>Harvester fleet support built on field work with Fiji Sugar Corporation. Road paving and compaction equipment also covered.</p></div>
+      <div class="card">
+        <h3>Excavators</h3>
+        <p>
+          Volvo EC140, EC210, EC290. JCB JS200. Caterpillar 320D.
+          Hydraulic, electrical and engine faults.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Loaders, graders and dozers</h3>
+        <p>
+          JCB 3DX and 4DX backhoe loaders, motor graders, dozers and
+          piling rigs.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Sugar cane harvesters</h3>
+        <p>
+          Harvester fleet support built on field work with Fiji Sugar
+          Corporation. Road paving and compaction equipment also covered.
+        </p>
+      </div>
     </div>
   </div>
 </section>
@@ -176,11 +793,34 @@ details p{color:var(--mut);margin-top:10px}
 <section id="process" style="background:#eceef0">
   <div class="w">
     <h2>How support works</h2>
-    <p class="intro">A simple path from fault report to a working machine.</p>
+
+    <p class="intro">
+      A simple path from fault report to a working machine.
+    </p>
+
     <ol class="steps">
-      <li><h3>Report the fault</h3><p>Send machine type, model, location and symptoms through the form, WhatsApp or our AI assistant.</p></li>
-      <li><h3>Remote diagnosis</h3><p>We review the symptoms and photos or fault codes and tell you the likely cause and next steps.</p></li>
-      <li><h3>On-site support</h3><p>Where the machine needs hands-on work, we arrange a field visit.</p></li>
+      <li>
+        <h3>Report the fault</h3>
+        <p>
+          Send machine type, model, location and symptoms through the form,
+          WhatsApp or our AI assistant.
+        </p>
+      </li>
+
+      <li>
+        <h3>Remote diagnosis</h3>
+        <p>
+          We review the symptoms and photos or fault codes and tell you the
+          likely cause and next steps.
+        </p>
+      </li>
+
+      <li>
+        <h3>On-site support</h3>
+        <p>
+          Where the machine needs hands-on work, we arrange a field visit.
+        </p>
+      </li>
     </ol>
   </div>
 </section>
@@ -188,11 +828,29 @@ details p{color:var(--mut);margin-top:10px}
 <section id="credentials">
   <div class="w">
     <h2>Experience you can verify</h2>
-    <p class="intro">25 years of hands-on work with the dealers and fleets that run this equipment.</p>
+
+    <p class="intro">
+      25 years of hands-on work with the dealers and fleets that run this
+      equipment.
+    </p>
+
     <div class="cred">
-      <div><b>Dealer-level experience</b><span>Former expert with Volvo, Caterpillar and John Deere dealers.</span></div>
-      <div><b>International fleet work</b><span>Sugar cane harvester fleet support with Fiji Sugar Corporation.</span></div>
-      <div><b>Earthmoving and road assets</b><span>Excavators, backhoe loaders, graders, dozers and paving equipment.</span></div>
+      <div>
+        <b>Dealer-level experience</b>
+        <span>Former expert with Volvo, Caterpillar and John Deere dealers.</span>
+      </div>
+
+      <div>
+        <b>International fleet work</b>
+        <span>Sugar cane harvester fleet support with Fiji Sugar Corporation.</span>
+      </div>
+
+      <div>
+        <b>Earthmoving and road assets</b>
+        <span>
+          Excavators, backhoe loaders, graders, dozers and paving equipment.
+        </span>
+      </div>
     </div>
   </div>
 </section>
@@ -200,16 +858,49 @@ details p{color:var(--mut);margin-top:10px}
 <section id="finder" style="background:#eceef0">
   <div class="w">
     <h2>Quick fault finder</h2>
-    <p class="intro">Pick the machine and the symptom for first checks you can do on site. Then send the details to us in one tap.</p>
+
+    <p class="intro">
+      Pick the machine and the symptom for first checks you can do on site.
+      Then send the details to us in one tap.
+    </p>
+
     <div class="ff">
       <div class="form">
-        <div><label for="fm">Machine</label>
-          <select id="fm"><option>Excavator</option><option>Backhoe loader</option><option>Sugar cane harvester</option><option>Grader / compactor</option><option>Dozer / piling rig</option></select></div>
-        <div><label for="fs">Main symptom</label>
-          <select id="fs"><option value="" disabled selected>Select symptom</option><option value="power">Loss of power</option><option value="heat">Overheating</option><option value="hyd">Weak or slow hydraulics</option><option value="start">Hard start or no start</option><option value="smoke">Excess exhaust smoke</option><option value="code">Warning light or fault code</option></select></div>
-        <p class="fine">Indicative guidance only. It does not replace a proper inspection.</p>
+        <div>
+          <label for="fm">Machine</label>
+
+          <select id="fm">
+            <option>Excavator</option>
+            <option>Backhoe loader</option>
+            <option>Sugar cane harvester</option>
+            <option>Grader / compactor</option>
+            <option>Dozer / piling rig</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="fs">Main symptom</label>
+
+          <select id="fs">
+            <option value="" disabled selected>Select symptom</option>
+            <option value="power">Loss of power</option>
+            <option value="heat">Overheating</option>
+            <option value="hyd">Weak or slow hydraulics</option>
+            <option value="start">Hard start or no start</option>
+            <option value="smoke">Excess exhaust smoke</option>
+            <option value="code">Warning light or fault code</option>
+          </select>
+        </div>
+
+        <p class="fine">
+          Indicative guidance only. It does not replace a proper inspection.
+        </p>
       </div>
-      <div class="res" id="res" aria-live="polite"><h3>Your first checks will appear here</h3><p class="fine">Choose a symptom to begin.</p></div>
+
+      <div class="res" id="res" aria-live="polite">
+        <h3>Your first checks will appear here</h3>
+        <p class="fine">Choose a symptom to begin.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -217,41 +908,132 @@ details p{color:var(--mut);margin-top:10px}
 <section id="regions" class="regions">
   <div class="w">
     <h2>Where we work</h2>
-    <p class="intro">Based in Gonda, Uttar Pradesh, supporting fleets internationally.</p>
-    <div class="reg"><span>India</span><span>Fiji</span><span>United Arab Emirates</span></div>
+
+    <p class="intro">
+      Based in Gonda, Uttar Pradesh, supporting fleets internationally.
+    </p>
+
+    <div class="reg">
+      <span>India</span>
+      <span>Fiji</span>
+      <span>United Arab Emirates</span>
+    </div>
   </div>
 </section>
 
 <section id="faq">
   <div class="w">
     <h2>Frequently asked questions</h2>
-    <details><summary>Which machines do you support?</summary><p>JCB, Volvo and Caterpillar excavators and loaders, graders, dozers, piling rigs, road equipment and sugar cane harvesters.</p></details>
-    <details><summary>Can you diagnose a fault remotely?</summary><p>Often yes. Send the model, symptoms, any fault codes and photos or short videos. Some faults need a physical inspection, and we will tell you when that is the case.</p></details>
-    <details><summary>Do you travel for on-site support?</summary><p>Yes. We support fleets in India, Fiji and the UAE. Send your site location and we will confirm availability.</p></details>
-    <details><summary>What should I send with my request?</summary><p>Machine make and model, year, operating hours, what the machine is doing, when it started, any fault codes, and recent repairs.</p></details>
-    <details><summary>Are you an authorised dealer?</summary><p>No. We are an independent service provider with dealer-level experience, not affiliated with the manufacturers.</p></details>
+
+    <details>
+      <summary>Which machines do you support?</summary>
+      <p>
+        JCB, Volvo and Caterpillar excavators and loaders, graders, dozers,
+        piling rigs, road equipment and sugar cane harvesters.
+      </p>
+    </details>
+
+    <details>
+      <summary>Can you diagnose a fault remotely?</summary>
+      <p>
+        Often yes. Send the model, symptoms, any fault codes and photos or
+        short videos. Some faults need a physical inspection, and we will
+        tell you when that is the case.
+      </p>
+    </details>
+
+    <details>
+      <summary>Do you travel for on-site support?</summary>
+      <p>
+        Yes. We support fleets in India, Fiji and the UAE. Send your site
+        location and we will confirm availability.
+      </p>
+    </details>
+
+    <details>
+      <summary>What should I send with my request?</summary>
+      <p>
+        Machine make and model, year, operating hours, what the machine is
+        doing, when it started, any fault codes, and recent repairs.
+      </p>
+    </details>
+
+    <details>
+      <summary>Are you an authorised dealer?</summary>
+      <p>
+        No. We are an independent service provider with dealer-level
+        experience, not affiliated with the manufacturers.
+      </p>
+    </details>
   </div>
 </section>
 
 <section id="contact">
   <div class="w">
     <h2>Request support</h2>
-    <p class="intro">Tell us about the machine and the fault. We will reply on WhatsApp.</p>
-    <form class="form" id="bookForm" action="https://formspree.io/f/meaeknzz" method="POST">
+
+    <p class="intro">
+      Tell us about the machine and the fault. We will reply on WhatsApp.
+    </p>
+
+    <form
+      class="form"
+      id="bookForm"
+      action="https://formspree.io/f/meaeknzz"
+      method="POST"
+    >
       <div class="two">
-        <div><label for="c">Full name</label><input id="c" name="Client" autocomplete="name" required></div>
-        <div><label for="co">Company (optional)</label><input id="co" name="Company" autocomplete="organization"></div>
+        <div>
+          <label for="c">Full name</label>
+          <input id="c" name="Client" autocomplete="name" required>
+        </div>
+
+        <div>
+          <label for="co">Company (optional)</label>
+          <input id="co" name="Company" autocomplete="organization">
+        </div>
       </div>
+
       <div class="two">
-        <div><label for="p">WhatsApp number with country code</label><input id="p" type="tel" name="Phone" autocomplete="tel" inputmode="tel" placeholder="+679 ..." required></div>
-        <div><label for="e">Email (optional)</label><input id="e" type="email" name="Email" autocomplete="email"></div>
+        <div>
+          <label for="p">WhatsApp number with country code</label>
+          <input
+            id="p"
+            type="tel"
+            name="Phone"
+            autocomplete="tel"
+            inputmode="tel"
+            placeholder="+679 ..."
+            required
+          >
+        </div>
+
+        <div>
+          <label for="e">Email (optional)</label>
+          <input id="e" type="email" name="Email" autocomplete="email">
+        </div>
       </div>
-      <div><label for="s">Site location (city, country)</label><input id="s" name="Site" required></div>
-      <div><label for="u">How urgent is it?</label>
-        <select id="u" name="Urgency" required><option value="" disabled selected>Select</option><option>Machine is down</option><option>Running with a fault</option><option>Planned inspection</option></select></div>
+
+      <div>
+        <label for="s">Site location (city, country)</label>
+        <input id="s" name="Site" required>
+      </div>
+
+      <div>
+        <label for="u">How urgent is it?</label>
+
+        <select id="u" name="Urgency" required>
+          <option value="" disabled selected>Select</option>
+          <option>Machine is down</option>
+          <option>Running with a fault</option>
+          <option>Planned inspection</option>
+        </select>
+      </div>
+
       <div class="two">
         <div>
           <label for="m">Equipment type</label>
+
           <select id="m" name="Machine_Type" required>
             <option value="" disabled selected>Select</option>
             <option>Excavator (Volvo / JCB / CAT)</option>
@@ -261,13 +1043,50 @@ details p{color:var(--mut);margin-top:10px}
             <option>Heavy equipment (dozer / piling rig)</option>
           </select>
         </div>
-        <div><label for="md">Model and year (optional)</label><input id="md" name="Model"></div>
+
+        <div>
+          <label for="md">Model and year (optional)</label>
+          <input id="md" name="Model">
+        </div>
       </div>
-      <div><label for="f">Describe the fault</label><textarea id="f" name="Fault_Description" rows="4" required></textarea></div>
-      <input class="hp" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
-      <button class="btn dark" type="submit" id="sendBtn">Send request</button>
-      <div class="msg" id="formMsg" role="status" aria-live="polite"></div>
-      <p class="fine">Prefer chat? Message us on <a href="https://wa.me/919198826081">WhatsApp</a> or call <a href="tel:+919198826081">+91 91988 26081</a>.</p>
+
+      <div>
+        <label for="f">Describe the fault</label>
+        <textarea
+          id="f"
+          name="Fault_Description"
+          rows="4"
+          required
+        ></textarea>
+      </div>
+
+      <input
+        class="hp"
+        type="text"
+        name="_gotcha"
+        tabindex="-1"
+        autocomplete="off"
+        aria-hidden="true"
+      >
+
+      <button class="btn dark" type="submit" id="sendBtn">
+        Send request
+      </button>
+
+      <div
+        class="msg"
+        id="formMsg"
+        role="status"
+        aria-live="polite"
+      ></div>
+
+      <p class="fine">
+        Prefer chat?
+        Message us on
+        <a href="https://wa.me/919198826081">WhatsApp</a>
+        or call
+        <a href="tel:+919198826081">+91 91988 26081</a>.
+      </p>
     </form>
   </div>
 </section>
@@ -275,63 +1094,538 @@ details p{color:var(--mut);margin-top:10px}
 <section class="jobs">
   <div class="w">
     <h2>Join our engineering network</h2>
-    <p>Experienced heavy equipment engineers and technicians can apply to work with us on international projects.</p>
-    <a class="btn" href="https://forms.gle/t6CPv9FL7erkpgBu7">Apply as an engineer</a>
+
+    <p>
+      Experienced heavy equipment engineers and technicians can apply to
+      work with us on international projects.
+    </p>
+
+    <a
+      class="btn"
+      href="https://forms.gle/t6CPv9FL7erkpgBu7"
+    >
+      Apply as an engineer
+    </a>
   </div>
 </section>
+
 </main>
 
 <footer>
   <div class="w">
     <div class="logo">H.K. Gupta Global</div>
-    <p>Gonda, Uttar Pradesh, India &nbsp;|&nbsp; Serving India, Fiji and the UAE</p>
-    <p><a href="tel:+919198826081">+91 91988 26081</a> &nbsp;|&nbsp; <a href="https://wa.me/919198826081">WhatsApp</a></p>
-    <small>H.K. Gupta Global is an independent service provider and is not affiliated with, authorised by or endorsed by JCB, Volvo, Caterpillar or John Deere. Brand names are used only to describe the equipment we service. Our AI assistant is automated and calls may be recorded.</small>
+
+    <p>
+      Gonda, Uttar Pradesh, India &nbsp;|&nbsp;
+      Serving India, Fiji and the UAE
+    </p>
+
+    <p>
+      <a href="tel:+919198826081">+91 91988 26081</a>
+      &nbsp;|&nbsp;
+      <a href="https://wa.me/919198826081">WhatsApp</a>
+    </p>
+
+    <small>
+      H.K. Gupta Global is an independent service provider and is not
+      affiliated with, authorised by or endorsed by JCB, Volvo, Caterpillar
+      or John Deere. Brand names are used only to describe the equipment we
+      service. Our AI assistant is automated and calls may be recorded.
+    </small>
   </div>
 </footer>
 
-<a class="fab" href="https://wa.me/919198826081" aria-label="Chat on WhatsApp">WhatsApp us</a>
+<a
+  class="fab"
+  href="https://wa.me/919198826081"
+  aria-label="Chat on WhatsApp"
+>
+  WhatsApp us
+</a>
 
 <div class="bar" role="region" aria-label="Quick actions">
-  <div class="st" id="st" role="status" aria-live="polite"></div>
+  <div
+    class="st"
+    id="st"
+    role="status"
+    aria-live="polite"
+  ></div>
+
   <div class="bb">
-    <button type="button" data-lang="en-US">AI assistant<br>English</button>
-    <button type="button" data-lang="hi-IN">AI assistant<br>हिन्दी</button>
-    <a href="#contact">Request<br>support</a>
+    <button type="button" data-lang="en-US">
+      AI assistant<br>English
+    </button>
+
+    <button type="button" data-lang="hi-IN">
+      AI assistant<br>हिन्दी
+    </button>
+
+    <a href="#contact">
+      Request<br>support
+    </a>
   </div>
 </div>
 
-<!-- ============ VAPI VOICE ASSISTANT ============ -->
+<!-- Quick fault finder -->
 <script>
-(function(){
-  // PUBLIC key only (never put a private key here)
-  var KEY = "433780ac-9d58-4d50-8035-c8be525f1a30";
-  var ID  = "cfc6c740-7363-441d-b350-f8a7b0b7f821";
+(function () {
+  "use strict";
 
-  // Fallback CDNs: if one is blocked or fails, the next is tried
-  var SOURCES = [
+  var machineSelect = document.getElementById("fm");
+  var symptomSelect = document.getElementById("fs");
+  var resultBox = document.getElementById("res");
+
+  var checks = {
+    power: [
+      "Check the air filter and fuel filter for restriction.",
+      "Check for active warning lights or fault codes.",
+      "Inspect fuel lines for leaks, air entry or poor fuel flow.",
+      "Check whether the problem appears only under hydraulic load."
+    ],
+    heat: [
+      "Stop the machine if the temperature is in the red zone.",
+      "Check coolant level only after the engine has cooled.",
+      "Inspect radiator and oil-cooler fins for blockage.",
+      "Check fan operation, belts and visible coolant leaks."
+    ],
+    hyd: [
+      "Check hydraulic oil level and oil condition.",
+      "Check whether all functions are slow or only one function.",
+      "Listen for pump noise or relief-valve operation.",
+      "Inspect hoses, cylinders and control valves for leakage."
+    ],
+    start: [
+      "Check battery voltage and terminal condition.",
+      "Check whether the starter turns the engine normally.",
+      "Check fuel level, fuel shut-off and visible fuel leaks.",
+      "Record any warning light or fault code shown while starting."
+    ],
+    smoke: [
+      "Note whether the smoke is black, blue or white.",
+      "Check air-filter restriction and engine oil level.",
+      "Check whether the smoke appears at idle or under load.",
+      "Stop the machine if smoke is accompanied by knocking or overheating."
+    ],
+    code: [
+      "Photograph the complete fault code and dashboard display.",
+      "Record when the code appears: startup, travel or hydraulic operation.",
+      "Do not disconnect the battery before recording the code.",
+      "Send the machine model, serial number and operating hours."
+    ]
+  };
+
+  if (!machineSelect || !symptomSelect || !resultBox) return;
+
+  symptomSelect.addEventListener("change", function () {
+    var selectedChecks = checks[symptomSelect.value];
+
+    if (!selectedChecks) return;
+
+    var list = selectedChecks.map(function (item) {
+      return "<li>" + item + "</li>";
+    }).join("");
+
+    var message =
+      "Hello, I need help with a " +
+      machineSelect.value +
+      ". Main symptom: " +
+      symptomSelect.options[symptomSelect.selectedIndex].text +
+      ".";
+
+    var whatsappUrl =
+      "https://wa.me/919198826081?text=" +
+      encodeURIComponent(message);
+
+    resultBox.innerHTML =
+      "<h3>First checks</h3>" +
+      "<ul>" + list + "</ul>" +
+      "<p class='fine'>" +
+      "Stop the machine if continued operation may cause damage or injury." +
+      "</p>" +
+      "<div class='cta'>" +
+      "<a class='btn dark' href='" + whatsappUrl + "'>" +
+      "Send details on WhatsApp" +
+      "</a>" +
+      "</div>";
+  });
+})();
+</script>
+
+<!-- Contact form handling -->
+<script>
+(function () {
+  "use strict";
+
+  var form = document.getElementById("bookForm");
+  var button = document.getElementById("sendBtn");
+  var message = document.getElementById("formMsg");
+
+  if (!form || !button || !message) return;
+
+  form.addEventListener("submit", async function (event) {
+    event.preventDefault();
+
+    button.disabled = true;
+    button.textContent = "Sending…";
+    message.className = "msg";
+    message.textContent = "";
+
+    try {
+      var response = await fetch(form.action, {
+        method: "POST",
+        body: new FormData(form),
+        headers: {
+          "Accept": "application/json"
+        }
+      });
+
+      if (!response.ok) {
+        throw new Error("The support request could not be sent.");
+      }
+
+      form.reset();
+
+      message.className = "msg ok";
+      message.textContent =
+        "Your request has been sent. We will contact you shortly.";
+    } catch (error) {
+      console.error("Form submission error:", error);
+
+      message.className = "msg err";
+      message.textContent =
+        "The form could not be sent. Please contact us on WhatsApp.";
+    } finally {
+      button.disabled = false;
+      button.textContent = "Send request";
+    }
+  });
+})();
+</script>
+
+<!-- Vapi voice assistant -->
+<script>
+(function () {
+  "use strict";
+
+  /*
+   * This is a Vapi PUBLIC key intended for browser-side use.
+   * Never replace it with a private API key.
+   */
+  var PUBLIC_KEY = "433780ac-9d58-4d50-8035-c8be525f1a30";
+  var ASSISTANT_ID = "cfc6c740-7363-441d-b350-f8a7b0b7f821";
+
+  var SDK_SOURCES = [
     "https://esm.sh/@vapi-ai/web@2.5.2",
-    "https://cdn.jsdelivr.net/npm/@vapi-ai/web@2.5.2/+esm",
-    "https://cdn.skypack.dev/@vapi-ai/web@2.5.2"
+    "https://cdn.jsdelivr.net/npm/@vapi-ai/web@2.5.2/+esm"
   ];
 
-  var vapi = null, loading = null, inCall = false, busy = false;
-  var st = document.getElementById('st');
-  var heroSt = document.getElementById('heroSt');
-  var btns = document.querySelectorAll('[data-lang]');
+  var vapi = null;
+  var loadingPromise = null;
+  var inCall = false;
+  var busy = false;
 
-  function say(t){
-    st.textContent = t; st.classList.toggle('on', !!t);
-    heroSt.textContent = t; heroSt.classList.toggle('on', !!t);
+  var mobileStatus = document.getElementById("st");
+  var heroStatus = document.getElementById("heroSt");
+  var callButtons = document.querySelectorAll("button[data-lang]");
+
+  function showStatus(text) {
+    var hasText = Boolean(text);
+
+    if (mobileStatus) {
+      mobileStatus.textContent = text || "";
+      mobileStatus.classList.toggle("on", hasText);
+    }
+
+    if (heroStatus) {
+      heroStatus.textContent = text || "";
+      heroStatus.classList.toggle("on", hasText);
+    }
   }
-  function live(on){ btns.forEach(function(b){ b.classList.toggle('live', on); }); }
 
-  // Handles every export shape: default, default.default, or named Vapi
-  function pickClass(m){
-    var c = m && (m.default || m.Vapi || m);
-    for (var i = 0; i < 3 && c && typeof c !== 'function'; i++) { c = c.default || c.Vapi; }
-    return typeof c === 'function' ? c : null;
+  function setButtonsDisabled(disabled) {
+    callButtons.forEach(function (button) {
+      button.disabled = disabled;
+    });
   }
 
-  function attempt(i){
-    if (i >= SOURCES.length) return Promise.
+  function setLiveState(active) {
+    callButtons.forEach(function (button) {
+      button.classList.toggle("live", active);
+    });
+  }
+
+  function getErrorText(error) {
+    try {
+      if (!error) return "Unknown error";
+
+      if (typeof error === "string") {
+        return error;
+      }
+
+      if (error.error) {
+        if (typeof error.error === "string") {
+          return error.error;
+        }
+
+        if (error.error.message) {
+          return error.error.message;
+        }
+
+        if (error.error.errorMsg) {
+          return error.error.errorMsg;
+        }
+
+        if (
+          error.error.error &&
+          error.error.error.message
+        ) {
+          return error.error.error.message;
+        }
+      }
+
+      return (
+        error.errorMsg ||
+        error.message ||
+        error.name ||
+        "Unknown Vapi error"
+      );
+    } catch (readError) {
+      return "Unknown Vapi error";
+    }
+  }
+
+  function configureClient(client) {
+    client.on("call-start", function () {
+      busy = false;
+      inCall = true;
+
+      setButtonsDisabled(false);
+      setLiveState(true);
+
+      showStatus("Call connected. Tap the AI button again to end.");
+    });
+
+    client.on("call-end", function () {
+      busy = false;
+      inCall = false;
+
+      setButtonsDisabled(false);
+      setLiveState(false);
+
+      showStatus("Call ended.");
+
+      window.setTimeout(function () {
+        if (!inCall && !busy) {
+          showStatus("");
+        }
+      }, 4000);
+    });
+
+    client.on("speech-start", function () {
+      if (inCall) {
+        showStatus("AI assistant is speaking…");
+      }
+    });
+
+    client.on("speech-end", function () {
+      if (inCall) {
+        showStatus("Listening…");
+      }
+    });
+
+    client.on("error", function (error) {
+      console.error("Vapi error:", error);
+
+      busy = false;
+      inCall = false;
+
+      setButtonsDisabled(false);
+      setLiveState(false);
+
+      showStatus("Call error: " + getErrorText(error));
+    });
+
+    return client;
+  }
+
+  async function loadVapiClient() {
+    if (vapi) {
+      return vapi;
+    }
+
+    if (loadingPromise) {
+      return loadingPromise;
+    }
+
+    loadingPromise = (async function () {
+      var lastError = null;
+
+      for (var index = 0; index < SDK_SOURCES.length; index++) {
+        var source = SDK_SOURCES[index];
+
+        try {
+          var importedModule = await import(source);
+          var VapiConstructor =
+            importedModule.default || importedModule.Vapi;
+
+          if (typeof VapiConstructor !== "function") {
+            throw new Error(
+              "The Vapi SDK loaded, but its constructor was not found."
+            );
+          }
+
+          return configureClient(
+            new VapiConstructor(PUBLIC_KEY)
+          );
+        } catch (error) {
+          lastError = error;
+
+          console.warn(
+            "Vapi SDK could not be loaded from:",
+            source,
+            error
+          );
+        }
+      }
+
+      throw (
+        lastError ||
+        new Error("The Vapi SDK could not be loaded.")
+      );
+    })();
+
+    try {
+      vapi = await loadingPromise;
+      return vapi;
+    } catch (error) {
+      loadingPromise = null;
+      throw error;
+    }
+  }
+
+  async function requestMicrophoneAccess() {
+    if (!window.isSecureContext) {
+      throw new Error(
+        "Microphone access requires a secure HTTPS website."
+      );
+    }
+
+    if (
+      !navigator.mediaDevices ||
+      typeof navigator.mediaDevices.getUserMedia !== "function"
+    ) {
+      throw new Error(
+        "This browser does not support microphone access."
+      );
+    }
+
+    var stream = await navigator.mediaDevices.getUserMedia({
+      audio:true
+    });
+
+    stream.getTracks().forEach(function (track) {
+      track.stop();
+    });
+  }
+
+  async function startOrStopCall(button) {
+    if (busy) return;
+
+    if (inCall && vapi) {
+      busy = true;
+      setButtonsDisabled(true);
+      showStatus("Ending call…");
+
+      try {
+        await Promise.resolve(vapi.stop());
+      } catch (error) {
+        console.error("Could not end Vapi call:", error);
+
+        showStatus(
+          "Could not end the call: " + getErrorText(error)
+        );
+      } finally {
+        busy = false;
+        inCall = false;
+
+        setButtonsDisabled(false);
+        setLiveState(false);
+      }
+
+      return;
+    }
+
+    busy = true;
+    setButtonsDisabled(true);
+
+    var selectedLanguage =
+      button.getAttribute("data-lang") || "en-US";
+
+    var languageName =
+      selectedLanguage === "hi-IN" ? "Hindi" : "English";
+
+    try {
+      showStatus("Requesting microphone permission…");
+
+      await requestMicrophoneAccess();
+
+      showStatus(
+        "Loading " + languageName + " AI assistant…"
+      );
+
+      var client = await loadVapiClient();
+
+      showStatus("Connecting call…");
+
+      await client.start(ASSISTANT_ID);
+    } catch (error) {
+      console.error("Vapi call could not start:", error);
+
+      busy = false;
+      inCall = false;
+
+      setButtonsDisabled(false);
+      setLiveState(false);
+
+      var errorMessage = getErrorText(error);
+      var normalizedMessage = errorMessage.toLowerCase();
+
+      if (
+        normalizedMessage.includes("permission") ||
+        normalizedMessage.includes("notallowed") ||
+        normalizedMessage.includes("denied")
+      ) {
+        showStatus(
+          "Microphone permission was denied. Allow microphone access and try again."
+        );
+      } else if (
+        normalizedMessage.includes("origin") ||
+        normalizedMessage.includes("domain") ||
+        normalizedMessage.includes("unauthorized")
+      ) {
+        showStatus(
+          "This website is not authorized in the Vapi public-key settings."
+        );
+      } else {
+        showStatus(
+          "Call could not start: " + errorMessage
+        );
+      }
+    } finally {
+      if (!inCall) {
+        busy = false;
+        setButtonsDisabled(false);
+      }
+    }
+  }
+
+  callButtons.forEach(function (button) {
+    button.addEventListener("click", function () {
+      startOrStopCall(button);
+    });
+  });
+})();
+</script>
+
+</body>
+</html>
