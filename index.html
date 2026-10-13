@@ -3,125 +3,170 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>H.K. GUPTA GLOBAL | Strategic Engineering Command</title>
+    <title>H.K. GUPTA GLOBAL | Strategic Engineering Authority</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=Inter:wght@400;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700;900&family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <style>
-        :root { --jcb: #FFD200; --dark: #080808; }
-        body { font-family: 'Inter', sans-serif; background-color: var(--dark); color: white; overflow-x: hidden; }
-        .heading { font-family: 'Space Grotesk', sans-serif; letter-spacing: -0.05em; }
-        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.05); }
-        .jcb-text { color: var(--jcb); }
-        .fluid-h1 { font-size: clamp(2.4rem, 12vw, 8rem); line-height: 0.85; }
-        .bento { transition: 0.5s cubic-bezier(0.19, 1, 0.22, 1); border: 1px solid rgba(255,255,255,0.05); border-radius: 2.5rem; }
-        .bento:hover { transform: translateY(-10px); border-color: var(--jcb); box-shadow: 0 20px 40px rgba(255,210,0,0.1); }
-        input, select, textarea { background: #111 !important; border: 1px solid #222 !important; color: white !important; padding: 16px; border-radius: 12px; font-size: 14px; width: 100%; }
-        input:focus { border-color: var(--jcb) !important; outline: none; }
-        @keyframes pulse-jcb { 0% { box-shadow: 0 0 0 0 rgba(255, 210, 0, 0.4); } 70% { box-shadow: 0 0 0 20px rgba(255, 210, 0, 0); } 100% { box-shadow: 0 0 0 0 rgba(255, 210, 0, 0); } }
-        .ai-pulse { animation: pulse-jcb 2s infinite; }
+        :root { --jcb: #FFD200; }
+        * { font-style: normal !important; text-transform: none; word-wrap: break-word; }
+        
+        /* NO BLACK POLICY: Industrial Light Silver Base */
+        body { font-family: 'Inter', sans-serif; background-color: #f3f4f6; color: #000; overflow-x: hidden; padding-bottom: 100px; }
+        .heading { font-family: 'Space Grotesk', sans-serif; text-transform: uppercase; font-weight: 900; }
+
+        /* BRIGHT CINEMATIC HD BACKGROUND SECTIONS */
+        .full-img-section {
+            background-size: cover; background-position: center; background-attachment: fixed;
+            min-height: 100vh; display: flex; align-items: center; width: 100%;
+        }
+        .img-hero { background-image: linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,0.1)), url('https://images.unsplash.com/photo-1541625602330-2277a4c4b28d?auto=format&fit=crop&w=1600&q=80'); }
+        .img-fleet { background-image: linear-gradient(rgba(255,255,255,0.2), rgba(255,255,255,0.2)), url('https://images.unsplash.com/photo-1581094288338-2314dddb7eed?auto=format&fit=crop&w=1600&q=80'); }
+        .img-agri { background-image: linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,0.1)), url('https://images.unsplash.com/photo-1592982537447-7440770cbfc9?auto=format&fit=crop&w=1600&q=80'); }
+        .img-dispatch { background-image: linear-gradient(rgba(255,255,255,0.2), rgba(255,255,255,0.2)), url('https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=1600&q=80'); }
+
+        /* WHITE FROSTED GLASS FOR ELITE READABILITY */
+        .white-glass { 
+            background: rgba(255, 255, 255, 0.92); 
+            backdrop-filter: blur(15px); 
+            border: 4px solid #000; 
+            border-radius: 2.5rem; 
+            padding: 2.5rem; 
+            box-shadow: 0 25px 60px rgba(0,0,0,0.15);
+            width: 100%;
+        }
+
+        /* TEXT ENGINE - NO CUTTING */
+        .fluid-h1 { font-size: clamp(2rem, 10vw, 7.5rem); line-height: 0.9; font-weight: 900; color: #000; text-shadow: 2px 2px 0px #FFD200; }
+        .jcb-bg { background-color: var(--jcb); color: #000; font-weight: 900; }
+
+        /* MOBILE POWER BAR */
+        .bottom-nav { position: fixed; bottom: 15px; left: 50%; transform: translateX(-50%); width: 96%; z-index: 1000; border: 4px solid #000; }
+        
+        input, select, textarea { background: #fff !important; border: 3px solid #000 !important; color: #000 !important; padding: 15px; border-radius: 12px; width: 100%; font-size: 16px; font-weight: 800; }
+        input:focus { outline: none; border-color: #FFD200 !important; box-shadow: 0 0 10px #FFD200; }
     </style>
 </head>
 <body class="antialiased">
 
-    <!-- Global Nav -->
-    <nav class="fixed top-0 w-full z-[100] glass py-5 px-6 md:px-20 flex justify-between items-center">
-        <div class="heading text-xl md:text-2xl font-bold tracking-tighter uppercase whitespace-nowrap">H.K. GUPTA<span class="jcb-text">.GLOBAL</span></div>
-        <div class="flex gap-4 items-center">
-            <select id="lang-select" class="bg-transparent text-[10px] font-bold uppercase tracking-widest text-jcb outline-none cursor-pointer">
-                <option value="en-US" class="bg-black text-white">English</option>
-                <option value="hi-IN" class="bg-black text-white">Hindi</option>
-            </select>
-            <a href="https://wa.me/919198826081" class="jcb-text text-xl"><i class="fab fa-whatsapp"></i></a>
-        </div>
+    <!-- Top Navigation -->
+    <nav class="fixed top-0 w-full z-[100] bg-[#FFD200] py-3 px-4 md:px-16 flex justify-between items-center border-b-4 border-black">
+        <div class="heading text-lg md:text-3xl font-black text-black leading-tight">H.K. GUPTA<span class="bg-black text-[#FFD200] px-2 ml-1">GLOBAL</span></div>
+        <a href="https://wa.me/919198826081" class="text-black text-3xl"><i class="fab fa-whatsapp"></i></a>
     </nav>
 
-    <!-- Hero Section -->
-    <header class="min-h-screen flex items-center px-6 md:px-20 pt-20 relative overflow-hidden">
-        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1581094288338-2314dddb7eed?auto=format&fit=crop&w=1600&q=80')] bg-cover bg-center opacity-10 grayscale"></div>
-        <div class="relative z-10 w-full">
-            <div class="inline-flex items-center gap-2 mb-6 px-3 py-1 rounded-full border border-jcb text-jcb text-[9px] font-black uppercase italic tracking-widest">
-                <span class="w-2 h-2 rounded-full bg-[#FFD200] animate-ping"></span> 25Y Global Command Node
-            </div>
-            <h1 class="heading fluid-h1 font-black uppercase italic mb-8">ELITE <br><span class="jcb-text italic font-light">DISPATCH</span> <br>COMMAND.</h1>
-            <p class="max-w-2xl text-gray-400 text-lg md:text-2xl font-light mb-12 italic">Mechanical oversight for Construction, Infrastructure & Agricultural fleets. **Powered by AI Multilingual Technical Support.**</p>
-            <div class="flex flex-col sm:flex-row gap-6">
-                <button onclick="startAICall()" class="bg-[#FFD200] text-black px-12 py-5 rounded-full font-black uppercase tracking-widest text-[11px] shadow-2xl ai-pulse hover:scale-105 transition">
-                    <i class="fas fa-headset mr-2"></i> Start AI Technical Audit
-                </button>
-                <a href="#dispatch" class="glass text-white px-12 py-5 rounded-full font-black uppercase tracking-widest text-[11px] text-center">Request dispatch</a>
+    <!-- Mobile 3-Button Power Bar -->
+    <div class="bottom-nav bg-[#FFD200] p-3 rounded-2xl flex justify-around items-center md:hidden shadow-2xl">
+        <button onclick="startCall('hi-IN')" class="flex flex-col items-center gap-1 text-black font-black">
+            <i class="fas fa-headset text-2xl"></i><span class="text-[9px]">HINDI AI</span>
+        </button>
+        <div class="h-10 w-[3px] bg-black/20"></div>
+        <button onclick="startCall('en-US')" class="flex flex-col items-center gap-1 text-black font-black">
+            <i class="fas fa-headset text-2xl"></i><span class="text-[9px]">ENGLISH AI</span>
+        </button>
+        <div class="h-10 w-[3px] bg-black/20"></div>
+        <a href="#dispatch" class="flex flex-col items-center gap-1 text-black font-black">
+            <i class="fas fa-bolt text-2xl"></i><span class="text-[9px]">BOOKING</span>
+        </a>
+    </div>
+
+    <!-- Section 1: Hero -->
+    <header class="full-img-section img-hero px-4 md:px-20 pt-20">
+        <div class="w-full">
+            <h1 class="heading fluid-h1 mb-8">COMMAND <br>THE FIELD.</h1>
+            <div class="white-glass max-w-2xl">
+                <p class="text-black text-lg md:text-3xl font-black uppercase leading-tight">
+                    25 Years of Mechanical Mastery. Strategic Technical Command for **JCB, Volvo, & Caterpillar** Fleets.
+                </p>
+                <div class="hidden md:flex gap-4 mt-8">
+                    <button onclick="startCall('hi-IN')" class="jcb-bg px-10 py-5 rounded-xl border-4 border-black text-lg">Start Hindi AI Audit</button>
+                    <button onclick="startCall('en-US')" class="bg-white px-10 py-5 rounded-xl border-4 border-black text-lg">Start English AI Audit</button>
+                </div>
             </div>
         </div>
     </header>
 
-    <!-- Operational Grid -->
-    <section id="fleet" class="py-32 px-6 md:px-20 bg-white text-black rounded-t-[3rem] md:rounded-t-[5rem] relative z-20 shadow-[0_-20px_50px_rgba(0,0,0,0.3)]">
-        <div class="container mx-auto">
-            <h2 class="heading text-4xl md:text-7xl mb-20 italic uppercase font-black">Strategic <br><span class="text-gray-300">Operations Grid.</span></h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="md:col-span-2 bg-gray-100 p-12 rounded-[3rem] bento">
-                    <h3 class="text-3xl font-black italic uppercase mb-4">Heavy Fleet Support</h3>
-                    <p class="text-gray-500 font-bold text-sm italic">Volvo EC-290 | JCB 3D/4DX Specialists | CAT 320D | Road Infrastructure Assets.</p>
+    <!-- Section 2: Fleet & History -->
+    <section class="full-img-section img-fleet px-4 md:px-20 py-24">
+        <div class="white-glass">
+            <h2 class="heading text-3xl md:text-7xl mb-8">LEGACY & FLEET.</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-black font-black uppercase text-sm md:text-xl">
+                <div class="border-l-8 border-[#FFD200] pl-6">
+                    <p>Volvo EC-290/210 | JCB JS-200 | CAT 320D Specialists.</p>
+                    <p class="text-gray-500 mt-2 text-xs md:text-lg">Former: Tractors India | GCPL Gainwell | Shaktiman Agri.</p>
                 </div>
-                
-                <!-- THE PARTNER SECTION (INTEGRATED) -->
-                <div class="bg-black text-white p-12 rounded-[3rem] bento border-2 border-jcb flex flex-col justify-between shadow-2xl">
-                    <div>
-                        <h4 class="heading text-jcb text-2xl font-bold uppercase mb-4 italic">Join Global Grid</h4>
-                        <p class="text-gray-400 text-xs italic mb-8">We manage global marketing. You provide technical mastery. Unified Billing System.</p>
-                    </div>
-                    <a href="https://forms.gle/t6CPv9FL7erkpgBu7" class="bg-[#FFD200] text-black text-center py-4 rounded-2xl font-black uppercase tracking-widest text-[10px]">Apply as Partner</a>
+                <div class="border-l-8 border-[#FFD200] pl-6">
+                    <p>Sugar Cane Harvester Fleet | Road Paving & Compaction.</p>
+                    <p class="text-gray-500 mt-2 text-xs md:text-lg">International Deployment: FIJI Sugar Corporation.</p>
                 </div>
-
-                <div class="bg-gray-100 p-12 rounded-[3rem] bento">
-                    <h4 class="text-xl font-black italic mb-2 uppercase">Agri-Solutions</h4>
-                    <p class="text-gray-400 text-xs italic font-bold">Sugar Cane Harvesters (International Fiji Specs).</p>
-                </div>
-                <div class="md:col-span-2 bg-[#FFD200] p-12 rounded-[3rem] bento flex items-center shadow-xl">
-                    <p class="text-2xl md:text-3xl font-black italic leading-none text-black">"Unified Technical Oversight and Centralized Billing on every global dispatch."</p>
-                </div>
+            </div>
+            <div class="mt-12 bg-black text-[#FFD200] p-8 rounded-3xl text-center">
+                <p class="font-black text-sm md:text-2xl uppercase">Join Our Strategic Partner Grid</p>
+                <a href="https://forms.gle/t6CPv9FL7erkpgBu7" class="jcb-bg px-12 py-4 mt-4 rounded-xl inline-block text-black text-sm">Apply Now</a>
             </div>
         </div>
     </section>
 
-    <!-- Dispatch Command (Form) -->
-    <section id="dispatch" class="py-32 bg-black px-6 md:px-20">
-        <div class="container mx-auto max-w-6xl grid lg:grid-cols-2 gap-20 items-center">
-            <div>
-                <h2 class="heading text-5xl md:text-8xl jcb-text italic mb-10 uppercase font-black">COMMAND <br><span class="text-white">CENTER.</span></h2>
-                <p class="text-gray-500 text-lg md:text-xl italic mb-12">Submit site technical details. All dispatch requests are vetted centrally before mobilizing compliance partners.</p>
-                <div class="flex gap-4">
-                    <a href="tel:+919198826081" class="glass p-5 rounded-full text-jcb text-xl shadow-2xl"><i class="fas fa-phone-alt"></i></a>
-                    <a href="mailto:hkg_1981@yahoo.co.in" class="glass p-5 rounded-full text-white text-xl shadow-2xl"><i class="fas fa-envelope"></i></a>
-                </div>
+    <!-- Section 3: Agri Global -->
+    <section class="full-img-section img-agri px-4 md:px-20 py-24">
+        <div class="container mx-auto flex justify-end">
+            <div class="white-glass max-w-4xl text-right !border-r-8 !border-l-0">
+                <h2 class="heading text-4xl md:text-9xl mb-4">GLOBAL <br>AGRI-TECH.</h2>
+                <p class="text-black font-black text-xl md:text-5xl uppercase leading-none">
+                    International Harvester Dispatch. <br>Fiji & India Specialists.
+                </p>
             </div>
-            <div class="glass p-10 md:p-14 rounded-[3.5rem] shadow-3xl">
-                <form action="https://formspree.io/f/meaeknzz" method="POST" class="space-y-6">
-                    <div class="grid grid-cols-2 gap-4">
-                        <input type="text" name="Client" placeholder="Name" required>
-                        <input type="tel" name="Phone" placeholder="WhatsApp" required>
+        </div>
+    </section>
+
+    <!-- Section 4: Dispatch Center (The Final Form) -->
+    <section id="dispatch" class="full-img-section img-dispatch px-4 md:px-20 py-24">
+        <div class="container mx-auto max-w-7xl grid lg:grid-cols-2 gap-16 items-center">
+            <div class="heading text-5xl md:text-9xl text-black leading-none">DISPATCH <br><span class="bg-black text-[#FFD200] px-3">CENTER.</span></div>
+            
+            <div class="white-glass shadow-2xl">
+                <form action="https://formspree.io/f/meaeknzz" method="POST" class="space-y-4 font-black uppercase">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <input type="text" name="Client" placeholder="CLIENT NAME / FIRM" required>
+                        <input type="tel" name="Phone" placeholder="WHATSAPP NUMBER" required>
                     </div>
-                    <input type="text" name="Site" placeholder="Site Location" required>
-                    <textarea name="Fault" rows="3" placeholder="Describe Mechanical Fault..."></textarea>
-                    <button type="submit" class="w-full bg-[#FFD200] text-black font-black py-6 rounded-2xl uppercase tracking-widest text-[10px] shadow-2xl hover:scale-[1.02] transition">Submit dispatch request</button>
+                    <input type="text" name="Location" placeholder="SITE LOCATION (CITY / COUNTRY)" required>
+                    
+                    <select name="Machine_Type" required>
+                        <option value="" disabled selected>SELECT MACHINE FLEET</option>
+                        <option>Excavator (Volvo/JCB/CAT)</option>
+                        <option>Backhoe Loader (JCB 3D/4DX)</option>
+                        <option>Sugar Cane Harvester (Fiji Specs)</option>
+                        <option>Road Infra (Compactor/Grader)</option>
+                        <option>Heavy Assets (Dozer/Piling)</option>
+                    </select>
+                    
+                    <!-- MISSING ITEM 1: DESCRIPTION BOX FOR FAULTS -->
+                    <textarea name="Fault_Description" rows="4" placeholder="DESCRIPTION OF TECHNICAL FAULTS / MECHANICAL ISSUES..." required></textarea>
+                    
+                    <!-- MISSING ITEM 2: DEPLOY SUPPORT BUTTON -->
+                    <button type="submit" class="w-full bg-black text-[#FFD200] py-6 rounded-xl text-xl font-black shadow-2xl uppercase hover:scale-105 transition">Deploy Support</button>
                 </form>
             </div>
         </div>
     </section>
 
-    <footer class="py-20 text-center opacity-40 px-6 border-t border-white/5">
-        <div class="heading text-xl md:text-2xl font-bold uppercase italic mb-8 tracking-widest">H.K. GUPTA GLOBAL</div>
-        <p class="text-[9px] font-bold uppercase tracking-[0.5em] text-gray-800 italic">Dispatch Nodes: Gonda, UP | Fiji | UAE | Pan-Asia Network</p>
+    <!-- MISSING ITEM 3: FINAL WORDS FOOTER -->
+    <footer class="bg-[#FFD200] py-24 text-center border-t-8 border-black px-6">
+        <div class="heading text-xl md:text-7xl font-black text-black mb-4">H.K. GUPTA GLOBAL</div>
+        <p class="font-black text-black text-sm md:text-2xl uppercase tracking-tighter leading-tight">
+            Gonda | Fiji | UAE | Pan-Asia Strategic Dispatch Node
+        </p>
     </footer>
 
-    <!-- AI INTEGRATION -->
+    <!-- AI LOGIC ENGINE -->
     <script src="https://cdn.jsdelivr.net/gh/VapiAI/html-script-tag@latest/dist/vapi-public.js"></script>
     <script>
         var vapi = new Vapi("661df336-aa38-4e98-8b38-51a3088daeeb"); 
-        function startAICall() {
-            const lang = document.getElementById('lang-select').value;
+        function startCall(lang) {
             vapi.start("cfc6c740-7363-441d-b350-f8a7b0b7f821", {
-                variableValues: { language: lang }
+                variableValues: { language: lang } 
             });
         }
     </script>
