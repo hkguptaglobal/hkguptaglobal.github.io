@@ -40,11 +40,14 @@ nav a:hover{text-decoration:underline}
 .hero p{font-size:clamp(1.05rem,2.4vw,1.35rem);max-width:52ch;color:#e6e8eb}
 .btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:12px 26px;border-radius:10px;border:2px solid var(--ink);background:var(--y);color:var(--ink);font:700 1rem Inter,sans-serif;text-decoration:none;cursor:pointer}
 .btn.ghost{background:transparent;color:#fff;border-color:#fff}
+.btn.ghost.live{background:var(--y);color:var(--ink);border-color:var(--y)}
 .btn.dark{background:var(--ink);color:var(--y)}
 .btn:disabled{opacity:.6;cursor:wait}
 .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
 .hero .cta .ai{display:none}
 @media(min-width:768px){.hero .cta .ai{display:inline-flex}}
+.hero .live-note{display:none;margin-top:14px;font-weight:700;color:var(--y)}
+.hero .live-note.on{display:block}
 
 /* stats */
 .stats{background:var(--ink);color:#fff;padding:0}
@@ -145,6 +148,7 @@ details p{color:var(--mut);margin-top:10px}
       <button class="btn ghost ai" type="button" data-lang="en-US">Talk to our AI assistant (English)</button>
       <button class="btn ghost ai" type="button" data-lang="hi-IN">AI assistant (Hindi)</button>
     </div>
+    <p class="live-note" id="heroSt" role="status" aria-live="polite"></p>
   </div>
 </div>
 
@@ -297,28 +301,37 @@ details p{color:var(--mut);margin-top:10px}
   </div>
 </div>
 
+<!-- ============ VAPI VOICE ASSISTANT ============ -->
 <script>
 (function(){
-  var KEY="433780ac-9d58-4d50-8035-c8be525f1a30", ID="cfc6c740-7363-441d-b350-f8a7b0b7f821";
-  var vapi=null, inCall=false, busy=false, st=document.getElementById('st');
-  var btns=document.querySelectorAll('[data-lang]');
-  function say(t){ st.textContent=t; st.classList.toggle('on',!!t); }
-  function live(on){ btns.forEach(function(b){ b.classList.toggle('live',on); }); }
-  function load(){
-    if(vapi) return Promise.resolve(vapi);
-    return import('https://esm.sh/@vapi-ai/web@2.5.2').then(function(m){
-      var V=(m.default&&m.default.default)?m.default.default:m.default;
-      vapi=new V(KEY);
-      vapi.on('call-start',function(){inCall=true;busy=false;live(true);say('Connected. Tap again to end the call.');});
-      vapi.on('call-end',function(){inCall=false;busy=false;live(false);say('');});
-      vapi.on('error',function(e){console.error('Vapi error',e);inCall=false;busy=false;live(false);say('Could not start the call. Please allow microphone access or use WhatsApp.');});
-      return vapi;
-    });
+  // PUBLIC key only (never put a private key here)
+  var KEY = "433780ac-9d58-4d50-8035-c8be525f1a30";
+  var ID  = "cfc6c740-7363-441d-b350-f8a7b0b7f821";
+
+  // Fallback CDNs: if one is blocked or fails, the next is tried
+  var SOURCES = [
+    "https://esm.sh/@vapi-ai/web@2.5.2",
+    "https://cdn.jsdelivr.net/npm/@vapi-ai/web@2.5.2/+esm",
+    "https://cdn.skypack.dev/@vapi-ai/web@2.5.2"
+  ];
+
+  var vapi = null, loading = null, inCall = false, busy = false;
+  var st = document.getElementById('st');
+  var heroSt = document.getElementById('heroSt');
+  var btns = document.querySelectorAll('[data-lang]');
+
+  function say(t){
+    st.textContent = t; st.classList.toggle('on', !!t);
+    heroSt.textContent = t; heroSt.classList.toggle('on', !!t);
   }
-  window.addEventListener('load',function(){ load().catch(function(e){console.error('Vapi load failed',e);}); });
-  btns.forEach(function(b){ b.addEventListener('click',function(){
-    if(inCall&&vapi){vapi.stop();return;}
-    if(busy)return; busy=true;
-    say('Connecting to our AI assistant. Calls may be recorded.');
-    load().then(function(v){ return v.start(ID,{variableValues:{language:b.dataset.lang}}); })
-      .catch(function(e){console.error(e);busy=false;say('Could not st
+  function live(on){ btns.forEach(function(b){ b.classList.toggle('live', on); }); }
+
+  // Handles every export shape: default, default.default, or named Vapi
+  function pickClass(m){
+    var c = m && (m.default || m.Vapi || m);
+    for (var i = 0; i < 3 && c && typeof c !== 'function'; i++) { c = c.default || c.Vapi; }
+    return typeof c === 'function' ? c : null;
+  }
+
+  function attempt(i){
+    if (i >= SOURCES.length) return Promise.
